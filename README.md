@@ -1,4 +1,4 @@
-Untuk langkah pertama masing" anggota ketikkan di CMD pada folder proyek:
+masing" anggota ketikkan di CMD pada folder proyek:
 "git clone https://github.com/andikow/pam.git"
 
 # pam

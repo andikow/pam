@@ -18,4 +18,4 @@ Pengembangan Aplikasi Mobile
  - Pengaturan (Daftar Ekspedisi, Asal Pengiriman), Halaman Pengaturan berisi item yang diperlukan.
  - Tab Pengiriman
 6. Vandarina Riscaaaa
- - Detail Transaksi
+ - Detail Transaksiiiii

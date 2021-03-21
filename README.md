@@ -17,5 +17,5 @@ Pengembangan Aplikasi Mobile
 5. Suryani S.
  - Pengaturan (Daftar Ekspedisi, Asal Pengiriman), Halaman Pengaturan berisi item yang diperlukan.
  - Tab Pengiriman
-6. Vandarina Riscaaaa
- - Detail Transaksiiiii
+6. Vandarina Risca
+ - Detail Transaksi

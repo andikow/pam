@@ -1,3 +1,6 @@
+referensi penggunaan native base:
+https://docs.nativebase.io/Components.html#Components
+
 masing" anggota ketikkan di CMD pada folder proyek:
 "git clone https://github.com/andikow/pam.git"
 

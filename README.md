@@ -1,3 +1,6 @@
+Untuk memodifikasi tema native base:
+
+
 referensi penggunaan native base:
 https://docs.nativebase.io/Components.html#Components
 

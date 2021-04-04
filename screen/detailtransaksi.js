@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Header } from 'native-base';
+import { Container, Header, Button, StyleProvider } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import getTheme from './../native-base-theme/components';
+import material from './../native-base-theme/variables/material.js';
 import {
   SafeAreaView,
   View,
   Text,
-  Button,
   TextInput,
   StyleSheet,
   Image,
@@ -18,9 +19,13 @@ export default class DetailTransaksi extends Component {
   render(){
     return (
       <>
+      <StyleProvider style={getTheme(material)}>
       <Container>
         <Header />
         <ScrollView>
+        <Button>
+             <Text>Click Me!</Text>
+           </Button>
         <View style={styles.title}>
           <Text style={styles.title}>DETAIL PEMBELIAN</Text>
         </View>
@@ -154,10 +159,11 @@ export default class DetailTransaksi extends Component {
         <Grid>
 
         </Grid>
-        
+
 
         </ScrollView>
       </Container>
+      </StyleProvider >
 
       </>
     );

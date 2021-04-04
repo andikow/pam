@@ -152,9 +152,88 @@ export default class DetailTransaksi extends Component {
           <Text style={styles.title}>RINCIAN PRODUK</Text>
         </View>
         <Grid>
+        <Row style={styles.judul}>
+          <Col style={styles.icon}>
+            <Text>1x</Text>
+          </Col>
+          <Col>
+            <Text>Atasan Hijau</Text>
+          </Col>
+          <Col>
+            <Text>Rp 250.000</Text>
+          </Col>
+          </Row>
 
+          <View style = {styles.lineStyle} />
+
+          <Row style={styles.judul}>
+            <Col style={styles.icon}>
+              <Text>1x</Text>
+            </Col>
+            <Col>
+              <Text>Bawahan Merah</Text>
+            </Col>
+            <Col>
+              <Text>Rp 100.000</Text>
+            </Col>
+            </Row>
         </Grid>
-        
+
+        <View style={styles.title}>
+          <Grid>
+            <Col>
+              <Text style={styles.title}>RIWAYAT PEMESANAN</Text>
+            </Col>
+            <Col>
+              <Text style={styles.btntambah}>+ TAMBAH</Text>
+            </Col>
+          </Grid>
+        </View>
+        <Grid>
+        <Row style={styles.riwayat}>
+          <Col>
+            <Text>17 Mar, 21:13</Text>
+          </Col>
+          <Col style={{flexDirection:'row'}}>
+            <Text style={styles.wrap}>Transaction status changed to paid</Text>
+          </Col>
+          </Row>
+          <Row style={styles.riwayat}>
+            <Col>
+              <Text>17 Mar, 21:10</Text>
+            </Col>
+            <Col style={{flexDirection:'row'}}>
+              <Text style={styles.wrap}>Transaction status changed to pending payment</Text>
+            </Col>
+            </Row>
+            <Row style={styles.riwayat}>
+              <Col>
+                <Text>17 Mar, 21:08</Text>
+              </Col>
+              <Col style={{flexDirection:'row'}}>
+                <Text style={styles.wrap}>New transaction created</Text>
+              </Col>
+              </Row>
+        </Grid>
+
+        <View style = {styles.lineStyle} />
+
+        <Grid>
+          <Col>
+            <TouchableOpacity style={styles.btn}>
+              <Text style={styles.buttonText}>CETAK LABEL PENGIRIMAN</Text>
+            </TouchableOpacity>
+          </Col>
+          <Col>
+          <TouchableOpacity style={styles.btn}>
+            <Text style={styles.buttonText}>SUDAH DIKIRIM</Text>
+          </TouchableOpacity>
+          </Col>
+        </Grid>
+
+        <TouchableOpacity style={styles.btnpesan}>
+          <Text style={styles.btnpesantext}>PESAN PENGIRIMAN</Text>
+        </TouchableOpacity>
 
         </ScrollView>
       </Container>
@@ -187,4 +266,53 @@ const styles = StyleSheet.create({
     height: 35,
     padding: 5,
   },
+  btntambah:{
+    textAlign: 'right',
+    padding: 5,
+    color: '#3784D7',
+    fontSize: 11,
+  },
+  wrap:{
+    flex: 1,
+    flexWrap: 'wrap',
+    flexShrink: 1,
+  },
+  riwayat: {
+    fontSize: 11,
+    color: '#A0A0A0',
+    padding: 5,
+  },
+  lineStyle:{
+    borderWidth: 0.5,
+    borderColor:'#A0A0A0',
+    margin:10,
+   },
+   btn: {
+     borderRadius : 25,
+     padding: 10,
+     margin: 5,
+     borderColor: '#A0A0A0',
+     borderWidth: 1,
+     width: 225,
+   },
+   buttonText: {
+     textAlign: 'center',
+     color: '#3784D7',
+     fontSize: 11,
+     fontWeight: 'bold',
+   },
+   btnpesan: {
+     borderRadius : 25,
+     padding: 10,
+     margin: 5,
+     backgroundColor: '#2479D4',
+     borderWidth: 1,
+     width: 465,
+   },
+   btnpesantext: {
+     textAlign: 'center',
+     color: '#fff',
+     fontSize: 12,
+     fontWeight: 'bold',
+   },
 });

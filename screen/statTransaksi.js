@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Header, Button, StyleProvider, Content, Form, Item, Input, Icon } from 'native-base';
+import { Container, Header, Button, StyleProvider, Content, Form, Item, Input } from 'native-base';
 // import getTheme from './../native-base-theme/components';
 // import material from './../native-base-theme/variables/material.js';
+import Icon from 'react-native-vector-icons/AntDesign';
 import { Picker } from '@react-native-picker/picker';
 import {
   Text,
@@ -71,7 +72,7 @@ export default class StatTransaksi extends Component {
                <Picker.Item label="Net Banking" value="key4" />
              </Picker>
            </Form>
-           <Icon name="tumblr" />
+           <Icon name="downcircle"/>
            <LineChart
            data={data}
            width={screenWidth}

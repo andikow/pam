@@ -1,5 +1,12 @@
-Untuk memodifikasi tema native base:
+Untuk menggunakan icon di halaman yang diperlukan import dulu icon dengan ketik:
 
+import Icon from 'react-native-vector-icons/AntDesign';
+Setelah import, untuk memanggil icon yang dibutuhkan caranya:
+<Icon name="downcircle"/>
+
+"AntDesign" bisa diganti dengan paket icon lain yang bisa dilihat di situs:
+https://oblador.github.io/react-native-vector-icons/
+Disitus itu juga uda dikasi contoh icon dan cara panggil semua icon nya.
 
 referensi penggunaan native base:
 https://docs.nativebase.io/Components.html#Components

@@ -264,6 +264,7 @@ const styles = StyleSheet.create({
   qty: {
     height: 70,
     width: 70,
+    padding: 5,
   },
   judul: {
     fontSize: 11,

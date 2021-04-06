@@ -3,6 +3,8 @@ import { Container, Header, Button, StyleProvider } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
+import Icon from 'react-native-vector-icons/AntDesign';
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   SafeAreaView,
   View,
@@ -10,7 +12,6 @@ import {
   TextInput,
   StyleSheet,
   Image,
-  TouchableOpacity,
   ScrollView,
 } from 'react-native';
 
@@ -23,16 +24,13 @@ export default class DetailTransaksi extends Component {
       <Container>
         <Header />
         <ScrollView>
-        <Button>
-             <Text>Click Me!</Text>
-           </Button>
         <View style={styles.title}>
           <Text style={styles.title}>DETAIL PEMBELIAN</Text>
         </View>
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon name="user" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -46,7 +44,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon name="message1" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -60,7 +58,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon name="enviromento" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -74,7 +72,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon name="wallet" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -88,7 +86,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon2 name="bank-outline" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -102,7 +100,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon2 name="truck-outline" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -116,7 +114,7 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon name="filetext1" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -133,7 +131,7 @@ export default class DetailTransaksi extends Component {
         </View>
         <Grid>
           <Col style={styles.icon}>
-          <Text>icon</Text>
+          <Icon2 name="truck-fast-outline" size={26} color="#6D73B5" />
           </Col>
           <Col>
             <Row style={styles.judul}>
@@ -158,7 +156,7 @@ export default class DetailTransaksi extends Component {
         </View>
         <Grid>
         <Row style={styles.judul}>
-          <Col style={styles.icon}>
+          <Col style={styles.qty}>
             <Text>1x</Text>
           </Col>
           <Col>
@@ -172,7 +170,7 @@ export default class DetailTransaksi extends Component {
           <View style = {styles.lineStyle} />
 
           <Row style={styles.judul}>
-            <Col style={styles.icon}>
+            <Col style={styles.qty}>
               <Text>1x</Text>
             </Col>
             <Col>
@@ -225,20 +223,20 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col>
-            <TouchableOpacity style={styles.btn}>
+            <Button rounded block light style={styles.btnblock1}>
               <Text style={styles.buttonText}>CETAK LABEL PENGIRIMAN</Text>
-            </TouchableOpacity>
+            </Button>
           </Col>
           <Col>
-          <TouchableOpacity style={styles.btn}>
+          <Button rounded block light style={styles.btnblock1}>
             <Text style={styles.buttonText}>SUDAH DIKIRIM</Text>
-          </TouchableOpacity>
+          </Button>
           </Col>
         </Grid>
 
-        <TouchableOpacity style={styles.btnpesan}>
+        <Button rounded block style={styles.btnblock}>
           <Text style={styles.btnpesantext}>PESAN PENGIRIMAN</Text>
-        </TouchableOpacity>
+        </Button>
 
         </ScrollView>
       </Container>
@@ -260,6 +258,12 @@ const styles = StyleSheet.create({
   icon: {
     height: 70,
     width: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  qty: {
+    height: 70,
+    width: 70,
   },
   judul: {
     fontSize: 11,
@@ -275,7 +279,7 @@ const styles = StyleSheet.create({
   btntambah:{
     textAlign: 'right',
     padding: 5,
-    color: '#3784D7',
+    color: '#6D73B5',
     fontSize: 11,
   },
   wrap:{
@@ -293,27 +297,22 @@ const styles = StyleSheet.create({
     borderColor:'#A0A0A0',
     margin:10,
    },
-   btn: {
-     borderRadius : 25,
+   btnblock1: {
      padding: 10,
      margin: 5,
      borderColor: '#A0A0A0',
      borderWidth: 1,
-     width: 225,
+     color: '#fff',
    },
    buttonText: {
      textAlign: 'center',
-     color: '#3784D7',
+     color: '#6D73B5',
      fontSize: 11,
      fontWeight: 'bold',
    },
-   btnpesan: {
-     borderRadius : 25,
+   btnblock: {
      padding: 10,
-     margin: 5,
-     backgroundColor: '#2479D4',
-     borderWidth: 1,
-     width: 465,
+     margin: 10,
    },
    btnpesantext: {
      textAlign: 'center',

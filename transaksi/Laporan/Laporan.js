@@ -51,7 +51,7 @@ export default class Profile extends Component {
             <View>
                 <View style={styles.card_body}>
                     <Text style={styles.text_body}>
-                        Terima Laporan transaksi berdasarkan periode yang diinginkan (mmaksimal rentang 3 bulan) ke email pemilik toko
+                        Terima Laporan transaksi berdasarkan periode yang diinginkan (maksimal rentang 3 bulan) ke email pemilik toko
                     </Text>
                 </View>
                 <View>
@@ -65,7 +65,7 @@ export default class Profile extends Component {
                     </TouchableOpacity>
                 </View>
             </View>
-            
+
         );
     }
 };

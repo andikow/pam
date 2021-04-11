@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import {AppRegistry} from 'react-native';
 import { Container, Header, Button, StyleProvider } from 'native-base';
-import Ekspedisi from './Pengaturan/Ekspedisi';
+import RootPengaturan from './Pengaturan/RootPengaturan';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material.js';
 import {name as appName} from './app.json';
@@ -21,4 +21,4 @@ export default class App extends Component {
     );
   }
 }
-AppRegistry.registerComponent(appName, () => Ekspedisi);
+AppRegistry.registerComponent(appName, () => RootPengaturan);

@@ -108,7 +108,7 @@ export default class MenuPengaturan extends Component {
 
                         <ListItem 
                             onPress={()=> this.props.navigation.navigate('')}>
-                        <Text>cash</Text>
+                        <Text>Cash</Text>
                         </ListItem>
                 </List>
 

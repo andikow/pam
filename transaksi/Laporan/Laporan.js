@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import { color } from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
     card_body: {
@@ -65,7 +64,7 @@ export default class Profile extends Component {
                     </TouchableOpacity>
                 </View>
             </View>
-
+            
         );
     }
 };

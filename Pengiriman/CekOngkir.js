@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
-import {View, Text, Button, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput} from 'react-native';
-
+import {View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput, Linking} from 'react-native';
+import Icon from 'react-native-vector-icons/EvilIcons';
+import getTheme from './../native-base-theme/components';
+import material from './../native-base-theme/variables/material.js';
+import { Container, Header, StyleProvider, Button } from 'native-base';
 
 
 const styles = StyleSheet.create({
@@ -8,28 +11,37 @@ const styles = StyleSheet.create({
       flex: 1,
       marginTop:20
     },
-    cardbox:{
-        borderColor:'#17a2b8',
-        marginTop:20,
-        marginBottom:20,
-        marginLeft:10,
-        marginRight:10,
-        padding:10,
-        backgroundColor:'#FFF8DC'
-    },
     inputtext:{
         borderBottomColor: '#1E90FF',
         borderBottomWidth: 1,
         marginLeft:20,
         marginRight:20,
         marginBottom:20
-        
     },
     text:{
         marginLeft:20,
         marginRight:20,
         color:'#696969'
-    }
+    },
+    styleicon:{
+        marginLeft:30,
+        marginRight:20,
+        marginBottom:10,
+        color:'#224F69'
+
+    },
+    title: {
+        fontSize: 11,
+        color: '#A0A0A0',
+        backgroundColor: '#F8F8F9',
+        padding: 5,
+      },
+    btncekOngkir:{
+        marginRight:10,
+        marginLeft:10,
+        marginTop:250,
+    },
+    
   });
 
 export default class AsalPengiriman extends Component {
@@ -37,23 +49,34 @@ export default class AsalPengiriman extends Component {
    
     render(){
         return (
-            <View style={styles.container}>
-            
-
-                <View>
+            <StyleProvider style={getTheme(material)}>
+                <Container>
+                <Header />
+                <View style={styles.container}>
                     <Text style={styles.text} >Berat (Kg) *</Text>
                     <TextInput  placeholder="1.0" style={styles.inputtext} />
 
-                    <Text style={styles.text} >Asal Pengiriman) *</Text>
-                    <TextInput  style={styles.inputtext} />
+                    <TextInput placeholder="Asal Pengiriman" style={styles.inputtext} />
+                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
+                        <Icon name="location" size={25} /> PILIH TITIK ASAL DI MAP
+                    </Text>
 
-                    <Text style={styles.text} >Tujuan Pengiriman *</Text>
-                    <TextInput style={styles.inputtext} />
-                
+                    <TextInput placeholder="Tujuan Pengiriman" style={styles.inputtext} />
+                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')} >
+                        <Icon name="location" size={25} /> PILIH TITIK TUJUAN DI MAP
+                    </Text>
+                   
+
+                    <Button rounded block style={styles.btncekOngkir}>
+                        <Text style={{color:'#FFFFFF'}}>CEK ONGKOS KIRIM</Text>
+                    </Button>
+
+
+
+
                 </View>
-
-
-            </View>
+                </Container>
+            </StyleProvider >
         );
     };
 };

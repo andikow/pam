@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         marginLeft:10,
         marginRight:10,
         padding:10,
-        backgroundColor:'#FFF8DC'
+        backgroundColor:'#FCE148'
     },
     inputtext:{
         borderBottomColor: '#1E90FF',
@@ -31,6 +31,16 @@ const styles = StyleSheet.create({
   });
 
 export default class AsalPengiriman extends Component {
+    static navigationOptions = {
+        title : 'Asal Pengiriman',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
 
    
     render(){

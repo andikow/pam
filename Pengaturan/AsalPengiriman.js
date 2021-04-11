@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
         marginRight:10,
         marginLeft:10,
         marginTop:250,
-
     }
   });
 
@@ -74,7 +73,7 @@ export default class AsalPengiriman extends Component {
                     <Text style={styles.text} >Kode Pos</Text>
                     <TextInput style={styles.inputtext} />
 
-                    <Button rounded block style={styles.btnsSimpan}>
+                    <Button onPress={()=> this.props.navigation.navigate('MenuPengaturan')} rounded block style={styles.btnsSimpan}>
                         <Text style={{color:'#FFFFFF'}}>SIMPAN</Text>
                     </Button>
                 </View>

@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
         padding: 5,
       },
     btncekOngkir:{
-        
-        height:30,
+        marginTop:20,
         margin:10
     },
     
@@ -59,7 +58,17 @@ const styles = StyleSheet.create({
     }
   });
   
-export default class AsalPengiriman extends Component {
+export default class CekOngkirDetail extends Component {
+    static navigationOptions = {
+        title : 'Cek Ongkir',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
 
    
     render(){
@@ -67,14 +76,13 @@ export default class AsalPengiriman extends Component {
             <StyleProvider style={getTheme(material)}>
                 <Container>
                 <ScrollView>
-                <Header />
                 <View style={styles.container}>
                     <Text style={styles.text} >Berat (Kg) *</Text>
                     <TextInput  placeholder="1.0" style={styles.inputtext} />
 
-                    <TextInput placeholder="JL. M.H. THAMRIN NO. 23, KEL PANDAU HULU I, KEC MEDAN KOTA, KOTA MEDAN, SUMATERA UTARA" style={styles.inputtext} />
+                    <TextInput placeholder="JL. M.H. THAMRIN NO. 23 UTARA" style={styles.inputtext} />
                     
-                    <TextInput placeholder="JL. MERBAU NO. 123, KEL. SEKIP, KEC MEDAN PETISAH, KOTA MEDAN, SUMATERA UTARA" style={styles.inputtext} />
+                    <TextInput placeholder="JL. MERBAU NO. 123" style={styles.inputtext} />
 
                     <View style={styles.title}>
                      <Text style={styles.title}>Hasil Cek Ongkir</Text>
@@ -114,8 +122,8 @@ export default class AsalPengiriman extends Component {
                     </View>
 
                 
-                    <Button rounded block style={styles.btncekOngkir}>
-                        <Text style={{color:'#FFFFFF'}}>KEMBALI</Text>
+                    <Button onPress={()=> this.props.navigation.navigate('CekOngkir')} rounded block style={styles.btncekOngkir}>
+                        <Text style={{color:'#FFFFFF'}}>HAPUS</Text>
                     </Button>
 
                     

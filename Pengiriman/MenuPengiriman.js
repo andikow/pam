@@ -3,13 +3,12 @@ import {View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput, 
 import Icon from 'react-native-vector-icons/EvilIcons';
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
-import { Container, Header, StyleProvider, Button } from 'native-base';
+import { Container, Header, StyleProvider, Button, ListItem, List } from 'native-base';
 
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      marginTop:20
+      flex: 1
     },
     inputtext:{
         borderBottomColor: '#1E90FF',
@@ -37,17 +36,30 @@ const styles = StyleSheet.create({
         padding: 5,
       },
     btncekOngkir:{
-        marginRight:10,
-        marginLeft:10,
-        marginTop:250,
+        
+        height:30,
+        margin:10
     },
     
+    stylefoto:{
+        width:70,
+        height:70
+    },
+    styleGrid:{
+        marginLeft:20,
+        marginRight:20
+    },
+    styleline:
+    {
+        borderBottomColor: '#C0C0C0',
+        borderBottomWidth: 1, 
+        padding: 8
+    }
   });
-
-export default class CekOngkir extends Component {
-
+  
+export default class MenuPengiriman extends Component {
     static navigationOptions = {
-        title : 'Cek Ongkir',
+        title : 'Pengiriman',
         headerStyle : {
             backgroundColor : '#6D73B5'
         },
@@ -56,33 +68,23 @@ export default class CekOngkir extends Component {
             fontSize : 18
         }
     }
+    
+   
     render(){
         return (
             <StyleProvider style={getTheme(material)}>
                 <Container>
+                <ScrollView>
                 <View style={styles.container}>
-                    <Text style={styles.text} >Berat (Kg) *</Text>
-                    <TextInput  placeholder="1.0" style={styles.inputtext} />
-
-                    <TextInput placeholder="Asal Pengiriman" style={styles.inputtext} />
-                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
-                        <Icon name="location" size={25} /> PILIH TITIK ASAL DI MAP
-                    </Text>
-
-                    <TextInput placeholder="Tujuan Pengiriman" style={styles.inputtext} />
-                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')} >
-                        <Icon name="location" size={25} /> PILIH TITIK TUJUAN DI MAP
-                    </Text>
-                   
-
-                    <Button onPress={()=> this.props.navigation.navigate('CekOngkirDetail')} rounded block style={styles.btncekOngkir}>
-                        <Text style={{color:'#FFFFFF'}}>CEK ONGKOS KIRIM</Text>
-                    </Button>
-
-
-
+                <List>
+                        <ListItem 
+                            onPress={()=> this.props.navigation.navigate('CekOngkir')}>
+                        <Text>Cek Ongkir</Text>
+                        </ListItem>
+                </List>
 
                 </View>
+                </ScrollView>
                 </Container>
             </StyleProvider >
         );

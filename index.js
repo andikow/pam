@@ -10,8 +10,8 @@ import DetailTransaksi from './screen/detailtransaksi.js';
 import Login from './screen/Login.js';
 import Mulai from './screen/Mulai.js';
 import Navigasi from './screen/Navigasi.js';
-import OpsiEkspedisi from './screen/OpsiEkspedisi.js';
-import OpsiLayanan from './screen/OpsiLayanan.js';
+import OpsiEkspedisi from './assets/components/OpsiEkspedisi.js';
+import OpsiLayanan from './assets/components/OpsiLayanan.js';
 import Password from './screen/Password.js';
 import PasswordBaru from './screen/PasswordBaru.js';
 import StatTransaksi from './screen/statTransaksi.js';
@@ -33,4 +33,4 @@ export default class App extends Component {
     );
   }
 }
-AppRegistry.registerComponent(appName, () => AppNavigator);
+AppRegistry.registerComponent(appName, () => CetakLabelKirim);

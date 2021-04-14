@@ -1,20 +1,20 @@
 import React from "react";
 import{ createAppContainer } from "react-navigation";
 import{ createStackNavigator } from "react-navigation-stack";
-import ProfilpenggunaComponent from './Pengaturan/Akun/Profilpengguna'
-import NamaComponent from './Pengaturan/Akun/Nama'
-import PassComponent from './Pengaturan/Akun/Pass'
+import Profilpengguna from './Profilpengguna.js'
+import Nama from './Nama.js'
+import Pass from './Pass.js'
 const AppNavigator = createStackNavigator({
-    
+
     Profil: {
-        screen: ProfilpenggunaComponent,
-            
+        screen: Profilpengguna,
+
     },
     Nama: {
-        screen: NamaComponent    
+        screen: Nama
     },
     Pass: {
-        screen: PassComponent    
+        screen: Pass
     },
 }
 );

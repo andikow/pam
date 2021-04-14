@@ -16,7 +16,8 @@ import Password from './screen/Password.js';
 import PasswordBaru from './screen/PasswordBaru.js';
 import StatTransaksi from './screen/statTransaksi.js';
 import Verifikasi from './screen/Verifikasi.js';
-import AppNavigator from './Pengaturan/RootPengaturan.js';
+import AppNavigator from './transaksi/Laporan/RootApp.js';
+import MainScreenNavigator from './transaksi/Status/TobTab.js';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material.js';
 import {name as appName} from './app.json';
@@ -33,4 +34,4 @@ export default class App extends Component {
     );
   }
 }
-AppRegistry.registerComponent(appName, () => AppNavigator);
+AppRegistry.registerComponent(appName, () => MainScreenNavigator);

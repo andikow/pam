@@ -29,7 +29,6 @@ const RootPengaturan = createStackNavigator({
     Tambahadmin :{
         screen : Tambahadmin
     }
-
 });
 
 export default createAppContainer(RootPengaturan);

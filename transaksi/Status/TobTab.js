@@ -39,7 +39,8 @@ const TopTab = createMaterialTopTabNavigator({
     tabBarOptions : {
         tabStyle : {
             backgroundColor : '#6D73B5',
-            width: 'auto'
+            flexWrap: 'nowrap',
+            width:'auto'
         }
     }
 })
@@ -55,36 +56,7 @@ const MainScreenNavigator = createStackNavigator({
             headerTitleStyle : {
                 color : '#fff',
                 paddingLeft : 40
-            },
-            headerRight : (
-                <Grid>
-                    <Col>
-                    <View style={{paddingRight: 8, paddingTop: 18}}>
-                            <Ionicons
-                                name= "md-search"
-                                size={20}
-                                color ="white"
-                                onPress={() =>{
-                                    console.log('Search')
-                                }}
-                            />
-                    </View>
-                    </Col>
-                    <Col>
-                    <View style={{paddingTop: 18}}>
-                    <Ionicons
-                            name= "md-filter"
-                            size={20}
-                            color ="white"
-                            paddingLeft
-                            onPress={() =>{
-                                console.log('Search')
-                            }}
-                        />
-                    </View> 
-                    </Col>
-                </Grid>
-            )
+            }
         },
     },
 });

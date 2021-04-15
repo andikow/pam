@@ -1,4 +1,3 @@
-Fix Git 15-4-2021
 Untuk menggunakan icon di halaman yang diperlukan import dulu icon dengan ketik:
 
 import Icon from 'react-native-vector-icons/AntDesign';

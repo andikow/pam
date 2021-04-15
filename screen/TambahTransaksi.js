@@ -274,7 +274,6 @@ export default class TambahTransaksi extends Component {
   }
 };
 
-
 const styles = StyleSheet.create({
   title: {
     fontSize: 11,

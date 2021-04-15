@@ -7,7 +7,8 @@ import Pass from './Pass.js'
 const RootAkun = createStackNavigator({
 
     Profil: {
-        screen: ProfilpenggunaComponent,  
+        screen: ProfilpenggunaComponent,
+
     },
     Nama: {
         screen: NamaComponent

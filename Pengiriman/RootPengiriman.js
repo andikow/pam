@@ -8,7 +8,7 @@ import MenuPengiriman from "./MenuPengiriman";
 import MenuPengirimanComponent from './MenuPengiriman'
 
 
-const AppNavigator = createStackNavigator({
+const RootPengiriman = createStackNavigator({
     MenuPengiriman:{
         screen : MenuPengirimanComponent
     },
@@ -20,4 +20,4 @@ const AppNavigator = createStackNavigator({
     }
 });
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(RootPengiriman);

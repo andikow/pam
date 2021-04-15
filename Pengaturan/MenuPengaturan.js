@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
         padding: 5,
       },
     btncekOngkir:{
-        
+
         height:30,
         margin:10
     },
-    
+
     stylefoto:{
         width:70,
         height:70
@@ -52,11 +52,11 @@ const styles = StyleSheet.create({
     styleline:
     {
         borderBottomColor: '#C0C0C0',
-        borderBottomWidth: 1, 
+        borderBottomWidth: 1,
         padding: 8
     }
   });
-  
+
 export default class MenuPengaturan extends Component {
     static navigationOptions = {
         title : 'Pengaturan',
@@ -68,8 +68,8 @@ export default class MenuPengaturan extends Component {
             fontSize : 18
         }
     }
-    
-   
+
+
     render(){
         return (
             <StyleProvider style={getTheme(material)}>
@@ -81,18 +81,18 @@ export default class MenuPengaturan extends Component {
                     <Text style={styles.title}>Akun</Text>
                 </View>
                 <List>
-                        <ListItem 
-                            onPress={()=> this.props.navigation.navigate('')}>
+                        <ListItem
+                            onPress={()=> this.props.navigation.navigate('Profilpengguna')}>
                         <Text>Profil Pengguna</Text>
                         </ListItem>
 
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('')}>
                         <Text>Profil Toko</Text>
                         </ListItem>
 
-                        <ListItem 
-                            onPress={()=> this.props.navigation.navigate('')}>
+                        <ListItem
+                            onPress={()=> this.props.navigation.navigate('Daftaradmin')}>
                         <Text>Daftar Admin</Text>
                         </ListItem>
                 </List>
@@ -101,12 +101,12 @@ export default class MenuPengaturan extends Component {
                     <Text style={styles.title}>Metode Pembayaran</Text>
                 </View>
                 <List>
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('')}>
                         <Text>Transfer Bank Manual</Text>
                         </ListItem>
 
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('')}>
                         <Text>Cash</Text>
                         </ListItem>
@@ -116,12 +116,12 @@ export default class MenuPengaturan extends Component {
                     <Text style={styles.title}>Pengiriman</Text>
                 </View>
                 <List>
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('Ekspedisi')}>
                         <Text>Daftar Ekspedisi</Text>
                         </ListItem>
 
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('AsalPengiriman')}>
                         <Text>Asal Pengiriman</Text>
                         </ListItem>
@@ -131,7 +131,7 @@ export default class MenuPengaturan extends Component {
                     <Text style={styles.title}>Lainnya</Text>
                 </View>
                 <List>
-                        <ListItem 
+                        <ListItem
                             onPress={()=> this.props.navigation.navigate('')}>
                         <Text style={{color:'#FF0000'}}>Log Out</Text>
                         </ListItem>

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         marginLeft:20,
         marginRight:20
-
+        
     },
     text:{
         marginLeft:20,
@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     },
   });
 
-
+    
 
 export default class Profilpengguna extends Component {
     static navigationOptions = ({navigation})=>{
         return {
-            title : 'Profil Pengguna',
+            title : 'Profile',
             headerStyle : {
                 backgroundColor : '#6d73b5'
             },
@@ -44,29 +44,29 @@ export default class Profilpengguna extends Component {
             )
 
         }
-
+            
 }
     render(){
         return (
             <ScrollView>
             <View style={styles.container}>
-
+            
                 <View>
                     <Text style={styles.text} >Username</Text>
-                    <TextInput style={styles.inputtext} placeholder="Enter Your Userame"  underlineColorAndroid='transparent'
+                    <TextInput style={styles.inputtext} placeholder="Enter Your Userame"  underlineColorAndroid='transparent'  
                     editable={false}  />
                     <Text></Text>
                     <Text style={styles.text} >Nomor Telepon</Text>
-                    <TextInput style={styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'
+                    <TextInput style={styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'  
                     editable={false}/>
                     <Text></Text>
                     <Text style={styles.text} >Email</Text>
-                    <TextInput style={styles.inputtext} placeholder="xxx@gmai.com"  underlineColorAndroid='transparent'
+                    <TextInput style={styles.inputtext} placeholder="xxx@gmai.com"  underlineColorAndroid='transparent'  
                     editable={false}/>
                     <Text></Text>
                     <Text style={styles.text} >Password</Text>
-                    <TextInput style={styles.inputtext} placeholder="*****"  underlineColorAndroid='transparent'
-                    editable={false}/>
+                    <TextInput style={styles.inputtext} placeholder="*****"  underlineColorAndroid='transparent'  
+                    editable={false}/>               
                 </View>
             </View>
             </ScrollView>

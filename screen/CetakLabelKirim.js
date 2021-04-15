@@ -4,18 +4,19 @@ import { SafeAreaView,
     ScrollView,
     View,
     Text,
+    StatusBar,
     TextInput,
-    TouchableOpacity,
-    Modal,
+    Button,
+    Image,
     Alert,
-    Button
+    TouchableOpacity,
+    Modal
     } from 'react-native'; 
-import {OpsiEkspedisi} from '../assets/components/OpsiEkspedisi';
-import {OpsiLayanan} from '../assets/components/OpsiLayanan';
+import {OpsiEkspedisi} from './OpsiEkspedisi';
+import {OpsiLayanan} from './OpsiLayanan';
 import {Col, Row, Grid} from 'react-native-easy-grid';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Icon2 from 'react-native-vector-icons/Ionicons'
-import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 
@@ -41,153 +42,127 @@ const CetakLabelKirim = () => {
     }
 
 
-    const alertCetakLabel = () =>{
-    Alert.alert(
-    "Label berhasil dibuat", 
-    "Label pengiriman berhasil dibuat dan dikirimkan ke email Anda",
-    [{text:"OK", onPress: () => console.log("alert closed")}])}
-
-
-    navigationOptions = ({navigation})=>{ 
-        return {
-            title : 'Cetak Label Pengiriman', 
-            headerStyle : {
-                backgroundColor : "#6D73B5"
-            },
-            headerTintColor : '#fff', 
-            }
-        }
+    const alertPassBaru = () =>
+Alert.alert(
+  "Label berhasil dibuat", 
+  "Label pengiriman berhasil dibuat dan dikirimkan ke email Anda",
+[{text:"OK", onPress: () => console.log("alert closed")}])
 
     return(
-        <ScrollView style={{padding:10, backgroundColor:'#224f69'}}>
-            <View style={{marginTop:50}}>
-            <View style={styles.title}>
-                <Text style={styles.title}>DETAIL PENERIMA</Text>
-            </View>
-            </View>
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon name="user" size={26} color="#6D73B5" />
-                </Col>
+        <ScrollView style={{padding:10}}>
+            <Grid style={{paddingTop:50}}>
                 <Col>
-                    <Row>
-                        <Text style={styles.judul}>Nama Penerima</Text>
-                    </Row>
-                    <Row style={styles.data}>
-                    <TextInput
-                            placeholder="Nama Penerima"
-                            placeholderTextColor="grey"
+                <Text style={styles.label}>DETAIL PENERIMA</Text>
+                </Col>
+            </Grid>
+
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon name="user" size={60} color="#6d73b5" style={{padding:10}}></Icon>
+                </Col>
+                <Col size={4}>
+                    <Row><Text style={styles.label2}>Nama Penerima</Text></Row>
+                    <Row style={{borderBottomWidth:1, marginRight:30}}><TextInput
+                            style={styles.input}
                             autoCapitalize="words"
                             keyboardType="default"
                             returnKeyType="next"
-                            defaultValue="Vandarina Risca"
-                    />
+                            defaultValue="Bintang"
+                        />
                     </Row>
                 </Col>
             </Grid>
 
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon name="phone" size={26} color="#6D73B5" />
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon name="phone" size={60} color="#6d73b5" style={{padding:10}}></Icon>
                 </Col>
-                <Col>
-                    <Row>
-                        <Text style={styles.judul}>No. Telp Penerima</Text>
-                    </Row>
-                    <Row style={styles.data}>
-                    <TextInput
-                            placeholder="No. Telp Penerima"
-                            placeholderTextColor="grey"
-                            keyboardType="number-pad"
-                            returnKeyType="next"
-                            defaultValue="085624742052"
-                    />
-                    </Row>
-                </Col>
-            </Grid>
-
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon2 name="md-location" size={26} color="#6D73B5" />
-                </Col>
-                <Col>
-                    <Row>
-                        <Text style={styles.judul}>Alamat Penerima</Text>
-                    </Row>
-                    <Row style={styles.data}>
-                    <TextInput
-                            placeholder="Alamat Penerima"
-                            placeholderTextColor="grey"
+                <Col size={4}>
+                    <Row><Text style={styles.label2}>No. Telp Penerima</Text></Row>
+                    <Row style={{borderBottomWidth:1, marginRight:30}}><TextInput
+                            style={styles.input}
                             autoCapitalize="words"
-                            keyboardType="default"
-                            returnKeyType="next"
-                            defaultValue="Jln. Merbau No. 123"
-                    />
-                    </Row>
-                </Col>
-            </Grid>
-
-            <View style={{marginTop:50}}>
-            <View style={styles.title}>
-                <Text style={styles.title}>DETAIL PENGIRIM</Text>
-            </View>
-            </View>
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon name="user" size={26} color="#6D73B5" />
-                </Col>
-                <Col>
-                    <Row>
-                        <Text style={styles.judul}>Nama Pengirim</Text>
-                    </Row>
-                    <Row style={styles.data}>
-                    <TextInput
-                            placeholder="Nama Pengirim"
-                            placeholderTextColor="grey"
-                            autoCapitalize="words"
-                            keyboardType="default"
-                            returnKeyType="next"
-                            defaultValue="E-stock Shop Indonesia"
-                    />
-                    </Row>
-                </Col>
-            </Grid>
-
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon name="phone" size={26} color="#6D73B5" />
-                </Col>
-                <Col>
-                    <Row>
-                        <Text style={styles.judul}>No. Telp Pengirim</Text>
-                    </Row>
-                    <Row style={styles.data}>
-                    <TextInput
-                            placeholder="No. Telp Pengirim"
-                            placeholderTextColor="grey"
                             keyboardType="number-pad"
                             returnKeyType="next"
                             defaultValue="08123456789"
-                    />
+                        />
                     </Row>
                 </Col>
             </Grid>
 
-            <Grid>
-                <Col style={styles.icon}>
-                    <Icon3 name="truck-fast-outline" size={26} color="#6D73B5" />
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon2 name="md-location" size={60} color="#6d73b5" style={{padding:10}}></Icon2>
                 </Col>
+                <Col size={4}>
+                    <Row><Text style={styles.label2}>Alamat Penerima</Text></Row>
+                    <Row style={{borderBottomWidth:1, marginRight:30}}><TextInput
+                            style={styles.input}
+                            autoCapitalize="words"
+                            keyboardType="default"
+                            returnKeyType="next"
+                            defaultValue="Jl. Thamrin no 17"
+                        />
+                    </Row>
+                </Col>
+            </Grid>
+
+            <Grid style={{paddingTop:50}}>
                 <Col>
+                <Text style={styles.label}>DETAIL PENGIRIM</Text>
+                </Col>
+            </Grid>
+
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon name="user" size={60} color="#6d73b5" style={{padding:10}}></Icon>
+                </Col>
+                <Col size={4}>
+                    <Row><Text style={styles.label2}>Nama Pengirim</Text></Row>
+                    <Row style={{borderBottomWidth:1, marginRight:30}}><TextInput
+                            style={styles.input}
+                            autoCapitalize="words"
+                            keyboardType="default"
+                            returnKeyType="next"
+                            defaultValue="Bulan Shop"
+                        />
+                    </Row>
+                </Col>
+            </Grid>
+
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon name="phone" size={60} color="#6d73b5" style={{padding:10}}></Icon>
+                </Col>
+                <Col size={4}>
+                    <Row><Text style={styles.label2}>No. Telp Pengirim</Text></Row>
+                    <Row style={{borderBottomWidth:1, marginRight:30}}><TextInput
+                            style={styles.input}
+                            autoCapitalize="words"
+                            keyboardType="number-pad"
+                            returnKeyType="next"
+                            defaultValue="08987654321"
+                        />
+                    </Row>
+                </Col>
+            </Grid>
+
+            <Grid style={styles.grid}>
+                <Col size={1}>
+                    <Icon2 name="logo-dropbox" size={60} color="#6d73b5" style={{padding:10}}></Icon2>
+                </Col>
+                <Col size={4}>
                     <Row>
-                        <Col><Text style={styles.judul}>Ekspedisi</Text></Col>
-                        <Col><Text style={styles.judul}>Layanan</Text></Col>
+                        <Col><Text style={styles.label2}>Ekspedisi</Text></Col>
+                        <Col><Text style={styles.label2}>Layanan</Text></Col>
                     </Row>
                     <Row>
-                        <Col style={{paddingRight:0}}>
+                        <Col style={{borderBottomWidth:1, marginRight:30}}>
                         <TouchableOpacity 
+                            style={styles.touchableOpacity}
                             onPress={() => changeModalVisibility(true)}    
                         >
-                        <Text style={styles.pilihan}>{chooseEkspedisi}</Text>
+                        <Text style={styles.text}>{chooseEkspedisi}</Text>
                         </TouchableOpacity>
                         <Modal
                             transparent={true}
@@ -201,11 +176,12 @@ const CetakLabelKirim = () => {
                         />
                         </Modal>
                         </Col>
-                        <Col style={{paddingLeft:10}}>
+                        <Col style={{borderBottomWidth:1, marginRight:30}}>
                             <TouchableOpacity 
+                                style={styles.touchableOpacity}
                                 onPress={() => changeModalVisibility1(true)}    
                             >
-                            <Text style={styles.pilihan}>{chooseLayanan}</Text>
+                            <Text style={styles.text}>{chooseLayanan}</Text>
                             </TouchableOpacity>
                             <Modal
                                 transparent={true}
@@ -223,64 +199,37 @@ const CetakLabelKirim = () => {
                 </Col>
             </Grid>
 
-            <View style={{paddingHorizontal:5, paddingBottom:100, paddingTop:50}}>  
+        <SafeAreaView style={styles.container}>
+
+        </SafeAreaView>
+
+            <View style={{paddingHorizontal:20, paddingBottom:100}}>  
             <Button
-                title="Cetak Label Pengiriman" 
-                color='#6d73b5'
-                onPress={alertCetakLabel}
+             title="Cetak Label Pengiriman" 
+              color='#6d73b5'
+              onPress={alertPassBaru}
             /> 
             </View>
-
-
-
         </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
-    title: {
-        fontSize: 11,
-        color: '#A0A0A0',
-        backgroundColor: '#6d73b5',
-        padding: 5,
-      },
-      icon: {
-        height: 70,
-        width: 70,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      qty: {
-        height: 70,
-        width: 70,
-        padding: 5,
-      },
-      judul: {
-        fontSize: 11,
-        color: '#A0A0A0',
-        height: 35,
-        padding: 5,
-      },
-      data: {
-        marginTop:-20,
-        borderBottomWidth:1,
-        borderBottomColor:"#6d73b5",
-      },
-      pilihan: {
-        borderBottomWidth:1,
-        borderBottomColor:"#6d73b5",
-      },
-      cetak: {
-        padding: 10,
-        margin: 10,
-        color:'#6d73b5',
-      },
-      cetaktext: {
-        textAlign: 'center',
-        color: '#fff',
-        fontSize: 12,
-        fontWeight: 'bold',
-      },
+    container: {
+        flex: 1, alignItems:'center', justifyContent:'center',padding:20
+    },
+
+    text: {
+        marginVertical:20, fontSize:20
+    },
+
+    touchableOpacity: {
+
+    },
+    label : {fontSize: 20},
+    label2 : {height: 20, fontSize: 15},
+    input : {height: 40, fontSize: 20},
+    grid:{paddingTop:10}
 });
 
 export default CetakLabelKirim;

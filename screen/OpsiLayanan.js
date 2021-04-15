@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, Text, View, TouchableOpacity, Dimensions, ScrollView} from 'react-native'
 
-const LAYANAN = ['REG', 'BEST', 'PRIORITY', 'SAME DAY'];
+const LAYANAN = ['REG', 'BEST', 'PRIORITY'];
 
 const OpsiLayanan = (props) => {
 

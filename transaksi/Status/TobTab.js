@@ -39,7 +39,8 @@ const TopTab = createMaterialTopTabNavigator({
     tabBarOptions : {
         tabStyle : {
             backgroundColor : '#6D73B5',
-            width: 'auto'
+            flexWrap: 'nowrap',
+            width:'auto'
         }
     }
 })
@@ -81,7 +82,7 @@ const MainScreenNavigator = createStackNavigator({
                                 console.log('Search')
                             }}
                         />
-                    </View> 
+                    </View>
                     </Col>
                 </Grid>
             )

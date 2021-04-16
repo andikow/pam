@@ -2,7 +2,7 @@ import React from "react";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import LaporanComponent from './transaksi/Laporan/Laporan'
+import LaporanComponent from './Laporan.js'
 
 const AppNavigator = createStackNavigator({
   Laporan: {

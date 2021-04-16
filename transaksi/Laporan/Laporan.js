@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#6b52ae',
     }
 })
-export default class Profile extends Component {
+export default class Laporan extends Component {
     static navigationOptions = {
         title : 'Laporan Transaksi',
         headerStyle : {
@@ -64,7 +64,7 @@ export default class Profile extends Component {
                     </TouchableOpacity>
                 </View>
             </View>
-            
+
         );
     }
 };

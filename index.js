@@ -18,6 +18,7 @@ import StatTransaksi from './screen/statTransaksi.js';
 import Verifikasi from './screen/Verifikasi.js';
 import AppNavigator from './transaksi/Laporan/RootApp.js';
 import MainScreenNavigator from './transaksi/Status/TobTab.js';
+import Sidebar from './SideBar/Sidebar.js';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material.js';
 import {name as appName} from './app.json';

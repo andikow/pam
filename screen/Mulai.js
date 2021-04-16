@@ -11,16 +11,7 @@ import { SafeAreaView,
     Alert
     } from 'react-native'; 
 
-const styles =StyleSheet.create({
-    label : {height: 40, fontSize: 20, marginHorizontal: 10, marginTop:20},
-    input : {height: 40, borderColor: 'black', borderWidth: 1, fontSize: 15, paddingLeft:15, marginHorizontal: 10, borderRadius:10},
-    container : {justifyContent: 'center', alignItems : 'center', margin:40 } 
-})
-
-
-
 export default class Mulai extends Component {
-
     static navigationOptions = ({navigation}) =>{
       return {
         headerShown:false
@@ -30,32 +21,22 @@ export default class Mulai extends Component {
 
     render(){
       return (
-        <ScrollView>
-            <View style={{alignItems:'center',marginTop:20, marginBottom:-50}}>
+        <View>
+            <View style={{alignItems:'center',justifyContent:'center',marginTop:150}}>
                 <Image
                      style={{width:300,height:300}}
                      source={require('../assets/images/logo.png')}
                 />  
-
             </View>
             
-            <View style={{paddingTop:200,paddingHorizontal:20}}>  
+            <View style={{paddingTop:200,paddingHorizontal:50}}>  
             <Button
              title="Masuk dengan E-mail" 
               color='#6d73b5'
-              onPress={()=> this.props.navigation.navigate('Login')}
+              onPress={()=> this.props.navigation.navigate('CekAkun')}
             /> 
             </View>
-
-            <View style={{paddingTop:20,paddingHorizontal:20}}>  
-            <Button
-             title="Buat Akun Baru" 
-              color='#6d73b5'
-              onPress={()=> this.props.navigation.navigate('BuatAkunBaru')}
-            /> 
-            </View>
-
-        </ScrollView>
+        </View>
       );
     }
   }

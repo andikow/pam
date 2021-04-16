@@ -2,37 +2,35 @@ import React from "react";
 import { createAppContainer } from "react-navigation"; 
 import { createStackNavigator } from "react-navigation-stack";
 import MulaiComponent from './Mulai'
-import LoginComponent from './Login' 
+import CekAkunComponent from './CekAkun'
+import DaftarAkunComponent from './DaftarAkun.js'
+import BerhasilBuatAkunComponent from './BerhasilBuatAkun'
+import LoginComponent from './Login'
 import PasswordBaruComponent from './PasswordBaru'
-import BuatAkunBaruComponent from './BuatAkunBaru'
-import VerifikasiComponent from './Verifikasi'
-import PasswordComponent from './Password'
-
-
+import TobTabComponent from '../transaksi/Status/TobTab'
 
 const AppNavigator = createStackNavigator({ 
     Mulai : {
         screen : MulaiComponent
         },
-
+    CekAkun : {
+        screen : CekAkunComponent
+        },
+    DaftarAkun : {
+        screen : DaftarAkunComponent
+        },
+    BerhasilBuatAkun : {
+        screen : BerhasilBuatAkunComponent
+        },
     Login : {
         screen : LoginComponent
-        }, 
-
-    BuatAkunBaru : {
-        screen : BuatAkunBaruComponent
-        }, 
-    
-    Verifikasi : {
-        screen : VerifikasiComponent
-            },     
-
-    Password : {
-        screen : PasswordComponent
-            },  
-
-    PasswordBaru : { 
-        screen : PasswordBaruComponent }
+        },
+    PasswordBaru : {
+        screen : PasswordBaruComponent
+        },
+    TobTab : {
+        screen : TobTabComponent
+        },
     })
 
 export default createAppContainer(AppNavigator);

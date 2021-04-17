@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { SafeAreaView,
     StyleSheet,
     ScrollView,
@@ -9,7 +9,7 @@ import { SafeAreaView,
     Modal,
     Alert,
     Button
-    } from 'react-native'; 
+    } from 'react-native';
 import {OpsiEkspedisi} from '../assets/components/OpsiEkspedisi';
 import {OpsiLayanan} from '../assets/components/OpsiLayanan';
 import {Col, Row, Grid} from 'react-native-easy-grid';
@@ -43,23 +43,23 @@ const CetakLabelKirim = () => {
 
     const alertCetakLabel = () =>{
     Alert.alert(
-    "Label berhasil dibuat", 
+    "Label berhasil dibuat",
     "Label pengiriman berhasil dibuat dan dikirimkan ke email Anda",
     [{text:"OK", onPress: () => console.log("alert closed")}])}
 
 
-    navigationOptions = ({navigation})=>{ 
+    navigationOptions = ({navigation})=>{
         return {
-            title : 'Cetak Label Pengiriman', 
+            title : 'Cetak Label Pengiriman',
             headerStyle : {
                 backgroundColor : "#6D73B5"
             },
-            headerTintColor : '#fff', 
+            headerTintColor : '#fff',
             }
         }
 
     return(
-        <ScrollView style={{padding:10, backgroundColor:'#224f69'}}>
+        <ScrollView style={{padding:10, backgroundColor:'#fff'}}>
             <View style={{marginTop:50}}>
             <View style={styles.title}>
                 <Text style={styles.title}>DETAIL PENERIMA</Text>
@@ -184,8 +184,8 @@ const CetakLabelKirim = () => {
                     </Row>
                     <Row>
                         <Col style={{paddingRight:0}}>
-                        <TouchableOpacity 
-                            onPress={() => changeModalVisibility(true)}    
+                        <TouchableOpacity
+                            onPress={() => changeModalVisibility(true)}
                         >
                         <Text style={styles.pilihan}>{chooseEkspedisi}</Text>
                         </TouchableOpacity>
@@ -195,15 +195,15 @@ const CetakLabelKirim = () => {
                             visible={isModalVisible}
                             nRequestClose={() => changeModalVisibility(false)}
                         >
-                        <OpsiEkspedisi 
+                        <OpsiEkspedisi
                                 changeModalVisibility={changeModalVisibility}
                                 setEkspedisi={setEkspedisi}
                         />
                         </Modal>
                         </Col>
                         <Col style={{paddingLeft:10}}>
-                            <TouchableOpacity 
-                                onPress={() => changeModalVisibility1(true)}    
+                            <TouchableOpacity
+                                onPress={() => changeModalVisibility1(true)}
                             >
                             <Text style={styles.pilihan}>{chooseLayanan}</Text>
                             </TouchableOpacity>
@@ -213,7 +213,7 @@ const CetakLabelKirim = () => {
                                 visible={isModalVisible1}
                                 nRequestClose={() => changeModalVisibility1(false)}
                             >
-                            <OpsiLayanan 
+                            <OpsiLayanan
                                     changeModalVisibility1={changeModalVisibility1}
                                     setLayanan={setLayanan}
                             />
@@ -223,12 +223,12 @@ const CetakLabelKirim = () => {
                 </Col>
             </Grid>
 
-            <View style={{paddingHorizontal:5, paddingBottom:100, paddingTop:50}}>  
+            <View style={{paddingHorizontal:5, paddingBottom:100, paddingTop:50}}>
             <Button
-                title="Cetak Label Pengiriman" 
+                title="Cetak Label Pengiriman"
                 color='#6d73b5'
                 onPress={alertCetakLabel}
-            /> 
+            />
             </View>
 
 
@@ -240,7 +240,7 @@ const CetakLabelKirim = () => {
 const styles = StyleSheet.create({
     title: {
         fontSize: 11,
-        color: '#A0A0A0',
+        color: '#fff',
         backgroundColor: '#6d73b5',
         padding: 5,
       },

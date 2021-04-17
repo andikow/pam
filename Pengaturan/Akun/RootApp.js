@@ -4,11 +4,10 @@ import{ createStackNavigator } from "react-navigation-stack";
 import Profilpengguna from './Profilpengguna.js'
 import Nama from './Nama.js'
 import Pass from './Pass.js'
-const AppNavigator = createStackNavigator({
+const RootProfil = createStackNavigator({
 
     Profil: {
         screen: Profilpengguna,
-
     },
     Nama: {
         screen: Nama
@@ -18,4 +17,4 @@ const AppNavigator = createStackNavigator({
     },
 }
 );
-export default createAppContainer(AppNavigator);
+export default createAppContainer(RootProfil);

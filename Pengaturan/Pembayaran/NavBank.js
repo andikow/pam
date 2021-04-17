@@ -1,24 +1,20 @@
 import React from "react";
 import{ createAppContainer } from "react-navigation";
 import{ createStackNavigator } from "react-navigation-stack";
-import TfBankComponent from './Pengaturan/Pembayaran/TfBank'
-import TambahAkunBankComponent from './Pengaturan/Pembayaran/TambahAkunBank'
-import CashComponent from './Pengaturan/Pembayaran/Cash'
+import TfBank from './TfBank.js'
+import TambahAkunBank from './TambahAkunBank.js'
+import Cash from './Cash.js'
 
 const AppNavigator = createStackNavigator({
-    
+
     TfBank:{
-        screen: TfBankComponent
+        screen: TfBank
     },
     TambahAkunBank:{
-        screen: TambahAkunBankComponent
-    }
-}
-);
-const Cash = createStackNavigator({
-    
+        screen: TambahAkunBank
+    },
     Cash:{
-        screen: CashComponent
+      screen: Cash
     },
 }
 );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 import { SafeAreaView,
     StyleSheet,
     ScrollView,
@@ -10,23 +10,23 @@ import { SafeAreaView,
     Image,
     Alert,
     TouchableOpacity
-    } from 'react-native'; 
+    } from 'react-native';
 
 
     const alertPassBaru = () =>
     Alert.alert(
-      "Permintaan Password Baru Berhasil", 
+      "Permintaan Password Baru Berhasil",
       "Password Baru Anda telah kami kirim ke e-mail Anda. Silakan kembali ke halaman Login dan gunakan Password baru tersebut",
     [{text:"OK", onPress: () => console.log('alert closed')}])
 
 
 export default class PasswordBaru extends Component {
-    static navigationOptions = { 
-        title : 'Buat Password Baru', 
-        headerStyle : { 
-            backgroundColor : '#6d73b5' 
-        }, 
-        headerTintColor : '#fff', headerTitleStyle : { fontSize : 20 } 
+    static navigationOptions = {
+        title : 'Buat Password Baru',
+        headerStyle : {
+            backgroundColor : '#6d73b5'
+        },
+        headerTintColor : '#fff', headerTitleStyle : { fontSize : 20 }
     }
 
     render(){
@@ -37,7 +37,7 @@ export default class PasswordBaru extends Component {
                 <Image
                      style={{width:200,height:200}}
                      source={require('../assets/images/logo.png')}
-                />  
+                />
             </View>
 
             <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
@@ -46,12 +46,12 @@ export default class PasswordBaru extends Component {
                 </Text>
             </View>
 
-            <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:10}}>  
+            <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:10}}>
             <Button
-             title="Kirim Link" 
+             title="Kirim Link"
               color='#6d73b5'
               onPress={alertPassBaru}
-            /> 
+            />
             </View>
             </ScrollView>
         </View>

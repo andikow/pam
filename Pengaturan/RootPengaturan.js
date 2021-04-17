@@ -6,7 +6,7 @@ import AsalPengirimanComponent from './AsalPengiriman'
 import MenuPengaturanComponent from './MenuPengaturan'
 import EkspedisiComponent from './Ekspedisi'
 
-import Profilpengguna from './Akun/Profilpengguna.js';
+import RootProfil from './Akun/Profilpengguna.js';
 import Daftaradmin from './Akun/Daftaradmin.js';
 import Tambahadmin from './Akun/Tambahadmin.js';
 
@@ -20,8 +20,8 @@ const RootPengaturan = createStackNavigator({
     Ekspedisi :{
         screen : EkspedisiComponent
     },
-    Profilpengguna :{
-        screen : Profilpengguna
+    RootProfil :{
+        screen : RootProfil
     },
     Daftaradmin :{
         screen : Daftaradmin

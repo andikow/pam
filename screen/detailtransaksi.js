@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Button, StyleProvider } from 'native-base';
+import { Container, Header, Button, StyleProvider, Left, Right, Body, Title } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
@@ -22,7 +22,18 @@ export default class DetailTransaksi extends Component {
       <>
       <StyleProvider style={getTheme(material)}>
       <Container>
-        <Header />
+      <Header>
+        <Left>
+          <Button transparent>
+            <Icon2 name='menu' size ={26} color="#fff"/>
+          </Button>
+        </Left>
+        <Body>
+          <Title>Detail Transaksi</Title>
+        </Body>
+        <Right>
+        </Right>
+      </Header>
         <ScrollView>
         <View style={styles.title}>
           <Text style={styles.title}>DETAIL PEMBELIAN</Text>

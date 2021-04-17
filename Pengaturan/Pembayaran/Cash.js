@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Switch, ScrollView, ToastAndroid} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import {Col, row, Grid} from "react-native-easy-grid";
+import {Col, Row, Grid} from "react-native-easy-grid";
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      flexDirection: 'column', 
+      flexDirection: 'column',
       alignItems : 'center',
       position: 'relative',
 
@@ -45,7 +45,7 @@ export default class Cash extends Component {
             },
 
         }
-            
+
 }
     state ={
         toggled: false
@@ -55,8 +55,8 @@ export default class Cash extends Component {
     }
     render(){
         return (
-            <ScrollView>               
-            <View style={styles.container}>            
+            <ScrollView>
+            <View style={styles.container}>
             <Grid style={{marginTop: 15}}>
                 <Col>
                 <Text style={{marginLeft: 10}}>Aktifkan Pembayaran Cash</Text>

@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
         width: 300,
         alignSelf:'center',
         bottom: -170,
-        
-        
+
+
     },
       visit: {
         margin: 10,
@@ -53,14 +53,14 @@ export default class Pass extends Component {
     }
     render(){
         return (
-           
+
             <View style={styles.container}>
-            <Ionicons    
+            <Ionicons
             name="md-pin-outline"
-             style={styles.icon}       
+             style={styles.icon}
             size={100}
             color ="green"
-            
+
             />
               <Text style={styles.text}>Klik button di bawah untuk menerima link</Text>
               <Text style={styles.text}>pembuatan password baru di email kamu.</Text>
@@ -70,7 +70,7 @@ export default class Pass extends Component {
               </TouchableOpacity>
               </View>
             </View>
-            
+
         );
     };
 };

@@ -13,14 +13,14 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         marginLeft:20,
         marginRight:20
-        
+
     },
     textInputFocus:{
         borderBottomColor: '#ff3609',
         borderBottomWidth: 1,
         marginLeft:20,
         marginRight:20
-        
+
     },
     inputtext1:{
         borderBottomColor: '#8a8a8a',
@@ -80,7 +80,7 @@ export default class Nama extends Component {
             headerLeft:(
                 <TouchableOpacity
                   onPress={() => Alert.alert(
-                    'Konsfirmasi Keluar',
+                    'Konfirmasi Keluar',
                     'Kamu memiliki perubahan yang belum disimpan. Apakah kamu yakin ingin membatalkan perubahan?',
                     [
                       {text: 'NO', onPress: () => console.warn('NO Pressed'), style: 'cancel'},
@@ -98,22 +98,22 @@ export default class Nama extends Component {
         return (
         <ScrollView>
             <View style={styles.container}>
-            
+
                 <View>
                     <Text style={styles.text} >Username</Text>
-                    <TextInput style={this.state.hasFocus ? styles.textInputFocus : styles.inputtext} placeholder="Enter Your Userame"  underlineColorAndroid='transparent'  
+                    <TextInput style={this.state.hasFocus ? styles.textInputFocus : styles.inputtext} placeholder="Enter Your Userame"  underlineColorAndroid='transparent'
                     editable={true}  onFocus={this.setFocus.bind(this, true)} onBlur={this.setFocus.bind(this, false)} />
                     <Text></Text>
                     <Text style={styles.text} >Nomor Telepon</Text>
-                    <TextInput  style={this.state.focus ? styles.textInputFocus : styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'  
+                    <TextInput  style={this.state.focus ? styles.textInputFocus : styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'
                     editable={true} onFocus={this.setFocuss.bind(this, true)} onBlur={this.setFocuss.bind(this, false)}/>
                     <Text></Text>
                     <Text style={styles.text} >Email</Text>
-                    <TextInput style={this.state.fokus ? styles.textInputFocus : styles.inputtext} placeholder="xxx@gmai.com"  underlineColorAndroid='transparent'  
+                    <TextInput style={this.state.fokus ? styles.textInputFocus : styles.inputtext} placeholder="xxx@gmai.com"  underlineColorAndroid='transparent'
                     editable={true} onFocus={this.setFocusss.bind(this, true)} onBlur={this.setFocusss.bind(this, false)}/>
                     <Text></Text>
                     <Text style={styles.text} >Password</Text>
-                    <TextInput style={styles.inputtext1} placeholder="*****"  underlineColorAndroid='transparent'  
+                    <TextInput style={styles.inputtext1} placeholder="*****"  underlineColorAndroid='transparent'
                     editable={false}/>
                     <Text style={styles.text1}  onPress={()=> this.props.navigation.push("Pass")}>UBAH PASSWORD</Text>
                 </View>

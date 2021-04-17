@@ -10,6 +10,9 @@ import Profilpengguna from './Pengaturan/Akun/Profilpengguna.js';
 import Daftaradmin from './Pengaturan/Akun/Daftaradmin.js';
 import Tambahadmin from './Pengaturan/Akun/Tambahadmin.js';
 
+import MainScreenNavigator from './transaksi/Status/TobTab.js';
+import Laporan from './transaksi/Laporan/Laporan.js';
+import Arsip from './transaksi/Arsip/Toptab.js';
 
 import MenuBar from './SideBar/MenuBar.js'
 
@@ -17,9 +20,12 @@ import CekOngkirComponent from './Pengiriman/CekOngkir'
 import CekOngkirDetailComponent from './Pengiriman/CekOngkirDetail'
 import MenuPengirimanComponent from './Pengiriman/MenuPengiriman'
 
+import Cash from './Pengaturan/Pembayaran/Cash.js';
+import TfBank from './Pengaturan/Pembayaran/TfBank.js';
 
+import StatTransaksi from './screen/statTransaksi.js';
 
-const RootPengaturan = createStackNavigator({
+const RootApp = createStackNavigator({
     MenuBar : {
         screen : MenuBar
     },
@@ -41,7 +47,7 @@ const RootPengaturan = createStackNavigator({
     Tambahadmin :{
         screen : Tambahadmin
     },
-    
+
     MenuPengiriman:{
         screen : MenuPengirimanComponent
     },
@@ -50,7 +56,25 @@ const RootPengaturan = createStackNavigator({
     },
     CekOngkirDetail: {
         screen: CekOngkirDetailComponent
+    },
+    Cash:{
+        screen: Cash
+    },
+    TfBank:{
+        screen: TfBank
+    },
+    StatTransaksi:{
+        screen: StatTransaksi
+    },
+    MainScreenNavigator:{
+        screen:MainScreenNavigator
+    },
+    Laporan:{
+        screen:Laporan
+    },
+    Arsip:{
+        screen:Arsip
     }
 });
 
-export default createAppContainer(RootPengaturan);
+export default createAppContainer(RootApp);

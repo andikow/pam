@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     color:'#6D73B5',
     marginRight:20
   }
-  
+
 });
 export default class MenuBar extends Component {
     static navigationOptions = ({navigation})=>{
@@ -32,18 +32,18 @@ export default class MenuBar extends Component {
         }
     }
 
-    
+
 }
   render() {
     return (
       <Container>
-        <Header style={{height:150, backgroundColor: '#6D73B5'}} > 
+        <Header style={{height:150, backgroundColor: '#6D73B5'}} >
           <Body style={{alignItems:'center'}}>
             <Title>
               <Icon name="store" size={40} />
             </Title>
-            
-            
+
+
             <Text />
 
             <View style={{alignItems:'center'}}>
@@ -53,45 +53,45 @@ export default class MenuBar extends Component {
         </Header>
 
         <Content padder>
-          <ListItem 
-              onPress={()=> this.props.navigation.navigate('')}>
+          <ListItem
+              onPress={()=> this.props.navigation.navigate('MainScreenNavigator')}>
               <IconTransaksi style={styles.styleicon} name="shopping-bag" size={20} /><Text  style={styles.stylelist}>Transaksi</Text>
           </ListItem>
-          <ListItem 
-              onPress={()=> this.props.navigation.navigate('')}>
+          <ListItem
+              onPress={()=> this.props.navigation.navigate('Laporan')}>
               <Text  style={styles.stylelist}>Status</Text>
           </ListItem>
-          <ListItem 
-              onPress={()=> this.props.navigation.navigate('')}>
+          <ListItem
+              onPress={()=> this.props.navigation.navigate('Laporan')}>
               <Text  style={styles.stylelist}>Laporan</Text>
           </ListItem>
-          <ListItem 
-              onPress={()=> this.props.navigation.navigate('')}>
+          <ListItem
+              onPress={()=> this.props.navigation.navigate('Arsip')}>
               <Text  style={styles.stylelist}>Arsip</Text>
           </ListItem>
 
-          <ListItem 
-              onPress={()=> this.props.navigation.navigate('')}>
+          <ListItem
+              onPress={()=> this.props.navigation.navigate('StatTransaksi')}>
               <IconStatistik style={styles.styleicon} name="piechart" size={20} /><Text  style={styles.stylelist}>Stastitik Toko</Text>
           </ListItem>
 
-          <ListItem 
+          <ListItem
               onPress={()=> this.props.navigation.navigate('MenuPengiriman')}>
               <IconTransaksi style={styles.styleicon} name="truck" size={20} /><Text  style={styles.stylelist}>Pengiriman</Text>
           </ListItem>
 
-          <ListItem 
+          <ListItem
               onPress={()=> this.props.navigation.navigate('')}>
               <IconTransaksi style={styles.styleicon} name="list-alt" size={20} /><Text  style={styles.stylelist}>Daftar Produk</Text>
           </ListItem>
 
-          <ListItem 
+          <ListItem
               onPress={()=> this.props.navigation.navigate('MenuPengaturan')}>
               <IconStatistik style={styles.styleicon} name="setting" size={20} /><Text  style={styles.stylelist}>Pengaturan</Text>
           </ListItem>
-          
+
         </Content>
-        
+
       </Container>
     );
   }

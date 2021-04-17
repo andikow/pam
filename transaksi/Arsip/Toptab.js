@@ -30,7 +30,7 @@ const TopTab = createMaterialTopTabNavigator({
     }
 })
 
-const MainScreenNavigator = createStackNavigator({
+const Arsip = createStackNavigator({
     TopTab: {
         screen: TopTab,
         navigationOptions: {
@@ -62,4 +62,4 @@ const MainScreenNavigator = createStackNavigator({
     },
 });
 
-export default createAppContainer(MainScreenNavigator);
+export default createAppContainer(Arsip);

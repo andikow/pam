@@ -70,15 +70,12 @@ import BerhasilBuatAkun from './screen/BerhasilBuatAkun.js';
 import CekAkun from './screen/CekAkun.js';
 import DaftarAkun from './screen/DaftarAkun.js';
 import RootPengaturan from './Pengaturan/RootPengaturan.js';
-import RootApp from './Pengaturan/Akun/RootApp.js';
+import RootProfil from './Pengaturan/Akun/RootApp.js';
 import RootPengiriman from './Pengiriman/RootPengiriman.js';
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material.js';
 import {name as appName} from './app.json';
-import RootPengaturan from './Pengaturan/RootPengaturan';
 import MenuBar from './SideBar/MenuBar';
-import MenuPengiriman from './Pengiriman/MenuPengiriman';
-import MenuPengaturan from './Pengaturan/MenuPengaturan';
 import RootApp from './RootApp';
 export default class App extends Component {
   render() {
@@ -93,5 +90,5 @@ export default class App extends Component {
     );
   }
 }
-AppRegistry.registerComponent(appName, () => Pass
+AppRegistry.registerComponent(appName, () => Navigasi
 );

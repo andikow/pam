@@ -75,8 +75,7 @@ export default class MenuPengaturan extends Component {
                     </TouchableOpacity>
          )
     }
-
-
+}
     render(){
         return (
             <StyleProvider style={getTheme(material)}>
@@ -90,7 +89,7 @@ export default class MenuPengaturan extends Component {
                 </View>
                 <List>
                         <ListItem
-                            onPress={()=> this.props.navigation.navigate('RootProfil')}>
+                            onPress={()=> this.props.navigation.navigate('Profilpengguna')}>
                         <Text>Profil Pengguna</Text>
                         </ListItem>
 
@@ -110,12 +109,12 @@ export default class MenuPengaturan extends Component {
                 </View>
                 <List>
                         <ListItem
-                            onPress={()=> this.props.navigation.navigate('')}>
+                            onPress={()=> this.props.navigation.navigate('TfBank')}>
                         <Text>Transfer Bank Manual</Text>
                         </ListItem>
 
                         <ListItem
-                            onPress={()=> this.props.navigation.navigate('')}>
+                            onPress={()=> this.props.navigation.navigate('Cash')}>
                         <Text>Cash</Text>
                         </ListItem>
                 </List>
@@ -150,6 +149,6 @@ export default class MenuPengaturan extends Component {
                 </ScrollView>
                 </Container>
             </StyleProvider >
-        );
-    };
+        )
+    }
 };

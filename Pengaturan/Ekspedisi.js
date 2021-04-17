@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Container, Text, Header, Content, ListItem, CheckBox, Body, Form,} from 'native-base';
-import {StyleSheet, View} from 'react-native';
+import { Container, Text, Header, Content, ListItem, CheckBox, Body, Form} from 'native-base';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
 
 
 
 
 export default class App extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({navigation})=>{
+    return {
     title : 'Daftar Ekspedisi',
     headerStyle : {
         backgroundColor : '#6D73B5'
@@ -14,8 +16,14 @@ export default class App extends Component {
     headerTintColor : '#fff',
     headerTitleStyle : {
         fontSize : 18
-    }
-  }
+    },
+    headerRight : (
+        <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
+                     <Icon name='menu' size={30} style={{marginRight:10}} />
+                </TouchableOpacity>
+     )
+}
+}
 
   constructor(props) {
     super(props)

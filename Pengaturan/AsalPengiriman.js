@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput, Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import { Container, Header, StyleProvider, Button } from 'native-base';
+import Icon2 from 'react-native-vector-icons/Entypo';
 
 
 const styles = StyleSheet.create({
@@ -44,7 +45,8 @@ const styles = StyleSheet.create({
   });
 
 export default class AsalPengiriman extends Component {
-    static navigationOptions = {
+    static navigationOptions = ({navigation})=>{
+        return {
         title : 'Asal Pengiriman',
         headerStyle : {
             backgroundColor : '#6D73B5'
@@ -52,8 +54,14 @@ export default class AsalPengiriman extends Component {
         headerTintColor : '#fff',
         headerTitleStyle : {
             fontSize : 18
-        }
+        },
+        headerRight : (
+            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
+                         <Icon2 name='menu' size={30} style={{marginRight:10}} />
+                    </TouchableOpacity>
+         )
     }
+}
     render(){
         return (
             <View style={styles.container}>

@@ -19,9 +19,19 @@ const styles = StyleSheet.create({
   }
   
 });
-export default class SidebarComponent extends Component {
-  static navigationOptions = {
-    header:null
+export default class MenuBar extends Component {
+    static navigationOptions = ({navigation})=>{
+        return {
+        title : 'Menu',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
+
     
 }
   render() {

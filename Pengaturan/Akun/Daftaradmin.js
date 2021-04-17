@@ -41,7 +41,7 @@ export default class Daftaradmin extends Component {
         },
         headerTintColor : '#fff',
         headerTitleStyle : {
-            fontSize : 25
+            fontSize : 18
         }
         }
     }

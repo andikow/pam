@@ -5,6 +5,7 @@ import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
 import { Container, Header, StyleProvider, Button, CheckBox } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import Icon2 from 'react-native-vector-icons/Entypo';
 
 
 const styles = StyleSheet.create({
@@ -59,7 +60,8 @@ const styles = StyleSheet.create({
   });
   
 export default class CekOngkirDetail extends Component {
-    static navigationOptions = {
+    static navigationOptions = ({navigation})=>{
+        return {
         title : 'Cek Ongkir',
         headerStyle : {
             backgroundColor : '#6D73B5'
@@ -67,8 +69,14 @@ export default class CekOngkirDetail extends Component {
         headerTintColor : '#fff',
         headerTitleStyle : {
             fontSize : 18
-        }
+        },
+        headerRight : (
+            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
+                         <Icon2 name='menu' size={30} style={{marginRight:10}} />
+                    </TouchableOpacity>
+         )
     }
+}
 
    
     render(){

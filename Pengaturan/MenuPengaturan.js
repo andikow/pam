@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput, Linking} from 'react-native';
-import Icon from 'react-native-vector-icons/EvilIcons';
+import Icon from 'react-native-vector-icons/Entypo';
+
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
-import { Container, Header, StyleProvider, Button, ListItem, List } from 'native-base';
+import { Container, Header, StyleProvider, Button, ListItem, List, Left, Body } from 'native-base';
 
 
 const styles = StyleSheet.create({
@@ -58,7 +59,8 @@ const styles = StyleSheet.create({
   });
 
 export default class MenuPengaturan extends Component {
-    static navigationOptions = {
+    static navigationOptions = ({navigation})=>{
+        return {
         title : 'Pengaturan',
         headerStyle : {
             backgroundColor : '#6D73B5'
@@ -66,7 +68,12 @@ export default class MenuPengaturan extends Component {
         headerTintColor : '#fff',
         headerTitleStyle : {
             fontSize : 18
-        }
+        },
+        headerRight : (
+            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
+                         <Icon name='menu' size={30} style={{marginRight:10}} />
+                    </TouchableOpacity>
+         )
     }
 
 
@@ -76,6 +83,7 @@ export default class MenuPengaturan extends Component {
                 <Container>
                 <ScrollView>
                 <View style={styles.container}>
+
 
                 <View style={styles.title}>
                     <Text style={styles.title}>Akun</Text>

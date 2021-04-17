@@ -100,7 +100,7 @@ export default class TambahAkunBank extends Component {
             },
             headerTintColor : '#fff',
             headerTitleStyle : {
-                fontSize : 20
+                fontSize : 18
             },
             headerRight:(
                 <TouchableOpacity

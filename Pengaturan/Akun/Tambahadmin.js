@@ -51,7 +51,7 @@ export default class Tambahadmin extends Component {
         },
         headerTintColor : '#fff',
         headerTitleStyle : {
-            fontSize : 25
+            fontSize : 18
         },
         headerRight:(
             <TouchableOpacity

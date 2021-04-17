@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
 import { Container, Header, StyleProvider, Button, ListItem, List } from 'native-base';
-
+import Icon2 from 'react-native-vector-icons/Entypo';
 
 const styles = StyleSheet.create({
     container: {
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
   });
   
 export default class MenuPengiriman extends Component {
-    static navigationOptions = {
+    static navigationOptions = ({navigation})=>{
+        return {
         title : 'Pengiriman',
         headerStyle : {
             backgroundColor : '#6D73B5'
@@ -66,8 +67,14 @@ export default class MenuPengiriman extends Component {
         headerTintColor : '#fff',
         headerTitleStyle : {
             fontSize : 18
-        }
+        },
+        headerRight : (
+            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
+                         <Icon2 name='menu' size={30} style={{marginRight:10}} />
+                    </TouchableOpacity>
+         )
     }
+}
     
    
     render(){

@@ -41,7 +41,7 @@ export default class Cash extends Component {
             },
             headerTintColor : '#fff',
             headerTitleStyle : {
-                fontSize : 25
+                fontSize : 18
             },
 
         }

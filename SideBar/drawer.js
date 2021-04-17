@@ -4,10 +4,9 @@ import { Card, Drawer, CardItem, Container, Header, Title, Content, Footer, Foot
 import SideBar from './Sidebar';
 
 
-export default class drawer extends Component {
+export default class drawercomponent extends Component {
     static navigationOptions = {
-        header:null
-        
+        header:null  
     }
     closeDrawer() {
         this._drawer._root.close()

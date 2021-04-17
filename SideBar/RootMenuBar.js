@@ -2,15 +2,14 @@ import React from "react";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import drawerComponent from './drawer'
 import MenuPengaturanComponent from '../Pengaturan/MenuPengaturan'
 import MenuPengirimanComponent from '../Pengiriman/MenuPengiriman'
-
+import MenuBarComponent from './MenuBar.js'
 
 
 const AppNavigator = createStackNavigator({
-    drawer :{
-        screen : drawerComponent
+    MenuBar :{
+        screen : MenuBarComponent
     },
     MenuPengaturan:{
         screen : MenuPengaturanComponent

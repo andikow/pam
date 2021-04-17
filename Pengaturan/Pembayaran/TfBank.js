@@ -41,7 +41,7 @@ export default class TfBank extends Component {
         },
         headerTintColor : '#fff',
         headerTitleStyle : {
-            fontSize : 20
+            fontSize : 18
         }
         }
     }

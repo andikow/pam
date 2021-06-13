@@ -28,7 +28,7 @@ export default class Home extends Component {
     render() {
         return (
             <View>
-                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 35, paddingTop: 10}}>Afen </Text>
+                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 20, paddingTop: 10}}>Afen </Text>
                 <Text style={{color: '#a9a9a9', fontSize: 12, paddingLeft: 20, paddingTop: 5}}>5x Handuk Merah dan 1 produk lainnya</Text>
                 <Text style={{color: '#6D73B5', fontSize: 12, paddingLeft: 20, paddingTop: 5, paddingBottom: 10}}>Dikirim Selasa, 6 Apr 2021 20;00 </Text>
                 <Text style={styles.Resi}>

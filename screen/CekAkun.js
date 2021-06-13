@@ -35,21 +35,22 @@ export default class CekAkun extends Component {
       return (
         <View>
             <ScrollView>
-            <View style={{alignItems:'center',justifyContent:'center',marginTop:50}}>
+            <View style={{alignItems:'center',justifyContent:'center',marginTop:100}}>
                 <Image
-                     style={{width:300,height:300}}
+                     style={{width:200,height:200}}
                      source={require('../assets/images/logo.png')}
                 />  
             </View>
+            <Text></Text>
 
-            <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
+            {/* <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
                 <Text style={{fontSize:16}}>
                     Masukkan e-mail kamu untuk login atau daftar akun
                 </Text>
-            </View>
+            </View> */}
 
-            <View style={{paddingTop:50}}>
-            <Text style={styles.label}>E-mail</Text>
+            {/* <View style={{paddingTop:20}}> */}
+            {/* <Text style={styles.label}>E-mail</Text>
             <TextInput
               style={styles.input}
               placeholder="Masukkan E-mail Anda"
@@ -58,11 +59,17 @@ export default class CekAkun extends Component {
               keyboardType="email-address"
               returnKeyType="next"
             />
-            </View>
+            </View> */}
             
             <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:30}}>  
             <Button
-             title="Daftar atau Login" 
+             title="Login" 
+              color='#6d73b5'
+              onPress={()=> this.props.navigation.navigate('Login')}
+            /> 
+            <Text></Text>
+            <Button
+             title="Daftar" 
               color='#6d73b5'
               onPress={()=> this.props.navigation.navigate('DaftarAkun')}
             /> 

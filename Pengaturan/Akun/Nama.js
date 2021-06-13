@@ -70,14 +70,14 @@ export default class Nama extends Component {
             headerTitleStyle : {
                 fontSize : 20
             },
-            headerRight:(
+            headerRight:()=>(
                 <TouchableOpacity
                   onPress={() => navigation.goBack()}
                  style={{marginRight: 15}}>
                 <Ionicons name="md-checkmark" size={30} color='#fff'/>
                 </TouchableOpacity>
             ),
-            headerLeft:(
+            headerLeft:()=>(
                 <TouchableOpacity
                   onPress={() => Alert.alert(
                     'Konfirmasi Keluar',

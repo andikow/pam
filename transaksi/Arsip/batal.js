@@ -17,7 +17,7 @@ export default class Home extends Component {
     render() {
         return (
             <Image 
-                style={{width: 360, height: 650}}
+                style={{width: 400, height: 650}}
                 source={require('../../assets/images/notransaksi.jpg')} />
         );
     }

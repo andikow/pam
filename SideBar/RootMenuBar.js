@@ -5,7 +5,8 @@ import { createStackNavigator } from "react-navigation-stack";
 import MenuPengaturanComponent from '../Pengaturan/MenuPengaturan'
 import MenuPengirimanComponent from '../Pengiriman/MenuPengiriman'
 import MenuBarComponent from './MenuBar.js'
-
+import DaftarProduk from "../Produk/DaftarProduk";
+import TambahTransaksi from "../screen/TambahTransaksi";
 
 const AppNavigator = createStackNavigator({
     MenuBar :{
@@ -16,6 +17,12 @@ const AppNavigator = createStackNavigator({
     },
     MenuPengiriman: {
         screen: MenuPengirimanComponent
+    },
+    DaftarProduk:{
+        screen : DaftarProduk
+    },
+    TambahTransaksi:{
+        screen : TambahTransaksi
     }
     
 

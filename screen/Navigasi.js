@@ -8,6 +8,7 @@ import BerhasilBuatAkunComponent from './BerhasilBuatAkun'
 import LoginComponent from './Login'
 import PasswordBaruComponent from './PasswordBaru'
 import RootApp from './../RootApp.js'
+import TambahProduk from "../Produk/TambahProduk";
 
 const AppNavigator = createStackNavigator({
     Mulai : {

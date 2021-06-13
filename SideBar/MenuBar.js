@@ -22,17 +22,8 @@ const styles = StyleSheet.create({
 export default class MenuBar extends Component {
     static navigationOptions = ({navigation})=>{
         return {
-        title : 'Menu',
-        headerStyle : {
-            backgroundColor : '#6D73B5'
-        },
-        headerTintColor : '#fff',
-        headerTitleStyle : {
-            fontSize : 18
-        }
+        header:null
     }
-
-
 }
   render() {
     return (
@@ -54,11 +45,11 @@ export default class MenuBar extends Component {
 
         <Content padder>
           <ListItem
-              onPress={()=> this.props.navigation.navigate('MainScreenNavigator')}>
+              onPress={()=> this.props.navigation.navigate('TambahTransaksi')}>
               <IconTransaksi style={styles.styleicon} name="shopping-bag" size={20} /><Text  style={styles.stylelist}>Transaksi</Text>
           </ListItem>
           <ListItem
-              onPress={()=> this.props.navigation.navigate('Laporan')}>
+              onPress={()=> this.props.navigation.navigate('MainScreenNavigator')}>
               <Text  style={styles.stylelist}>Status</Text>
           </ListItem>
           <ListItem
@@ -81,7 +72,7 @@ export default class MenuBar extends Component {
           </ListItem>
 
           <ListItem
-              onPress={()=> this.props.navigation.navigate('')}>
+              onPress={()=> this.props.navigation.navigate('DaftarProduk')}>
               <IconTransaksi style={styles.styleicon} name="list-alt" size={20} /><Text  style={styles.stylelist}>Daftar Produk</Text>
           </ListItem>
 

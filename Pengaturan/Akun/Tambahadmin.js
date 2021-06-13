@@ -53,7 +53,7 @@ export default class Tambahadmin extends Component {
         headerTitleStyle : {
             fontSize : 18
         },
-        headerRight:(
+        headerRight:()=>(
             <TouchableOpacity
              onPress={() => navigation.goBack()}
              style={{marginRight: 15}}>

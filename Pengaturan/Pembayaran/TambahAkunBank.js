@@ -102,14 +102,14 @@ export default class TambahAkunBank extends Component {
             headerTitleStyle : {
                 fontSize : 18
             },
-            headerRight:(
+            headerRight:()=>(
                 <TouchableOpacity
                   onPress={() => navigation.goBack()}
                  style={{marginRight: 15}}>
                 <Ionicons name="md-checkmark" size={30} color='#fff'/>
                 </TouchableOpacity>
             ),
-            headerLeft:(
+            headerLeft:()=>(
                 <TouchableOpacity
                   onPress={() => Alert.alert(
                     'Konsfirmasi Keluar',

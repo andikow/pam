@@ -59,7 +59,7 @@ export default class StatTransaksi extends Component {
    render() {
      return (
        <Container>
-       <Header>
+       {/* <Header>
         <Left>
           <Button transparent>
             <MCIcon name='menu' size ={26} color="#fff"/>
@@ -68,7 +68,7 @@ export default class StatTransaksi extends Component {
         <Body>
           <Title style={styles.title}>Statistik Toko</Title>
         </Body>
-      </Header>
+      </Header> */}
       <Grid>
         <Text style={styles.segmentTitle}>STATISTIK TRANSAKSI</Text>
         <Row size={50}>

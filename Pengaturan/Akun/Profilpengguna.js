@@ -35,7 +35,7 @@ export default class Profilpengguna extends Component {
             headerTitleStyle : {
                 fontSize : 18
             },
-            headerRight:(
+            headerRight:()=>(
                 <TouchableOpacity
                   onPress={() => navigation.push('Nama')}
                  style={{marginRight: 15}}>

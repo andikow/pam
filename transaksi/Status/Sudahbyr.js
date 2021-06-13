@@ -28,7 +28,7 @@ export default class Home extends Component {
     render() {
         return (
             <View>
-                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 35, paddingTop: 10}}>Rini Susanti </Text>
+                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 20, paddingTop: 10}}>Rini Susanti </Text>
                 <Text style={{color: '#a9a9a9', fontSize: 12, paddingLeft: 20, paddingTop: 5}}>1x Kain Panjang</Text>
                 <Text style={{color: '#000', fontSize: 12, paddingLeft: 20, paddingTop: 5, paddingBottom: 10}}>Dibayar Hari ini, 18:49 </Text>
                 <Text style={styles.harga}>

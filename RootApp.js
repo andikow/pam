@@ -25,6 +25,10 @@ import TfBank from './Pengaturan/Pembayaran/TfBank.js';
 
 import StatTransaksi from './screen/statTransaksi.js';
 
+import DaftarProduk from "./Produk/DaftarProduk";
+import TambahProduk from "./Produk/TambahProduk";
+import TambahTransaksi from "./screen/TambahTransaksi";
+
 const RootApp = createStackNavigator({
     MenuBar : {
         screen : MenuBar
@@ -64,16 +68,78 @@ const RootApp = createStackNavigator({
         screen: TfBank
     },
     StatTransaksi:{
-        screen: StatTransaksi
+        screen: StatTransaksi,
+        navigationOptions : {
+            title : 'Statistik Toko',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+        }
     },
     MainScreenNavigator:{
-        screen:MainScreenNavigator
+        screen:MainScreenNavigator,
+        navigationOptions : {
+            title : 'Status Transaksi',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+        }
+        
     },
+
     Laporan:{
-        screen:Laporan
+        screen:Laporan,
+        navigationOptions : {
+            title : 'Laporan Transaksi',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
     },
     Arsip:{
-        screen:Arsip
+        screen:Arsip,
+        navigationOptions : {
+            title : 'Arsip',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
+    },
+    DaftarProduk:{
+        screen:DaftarProduk
+    },
+    TambahProduk:{
+        screen: TambahProduk
+    },
+    TambahTransaksi:{
+        screen : TambahTransaksi,
+        navigationOptions : {
+            title : 'Tambah Transaksi',
+        headerStyle : {
+            backgroundColor : '#6D73B5'
+        },
+        headerTintColor : '#fff',
+        headerTitleStyle : {
+            fontSize : 18
+        }
+    }
+
     }
 });
 

@@ -19,7 +19,7 @@ import { SafeAreaView,
 
 export default class Login extends Component {
     static navigationOptions = {
-        title : 'Login dengan E-mail',
+        title : 'Login',
         headerStyle : {
             backgroundColor : '#6d73b5'
         },

@@ -20,12 +20,29 @@ export default class TambahTransaksi extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected2: undefined
+      selected2: undefined,
+      selected3: undefined,
+      selected4: undefined
     };
   }
-  onValueChange2(value: string) {
+  onValueChange2(value) {
     this.setState({
       selected2: value
+    });
+  }
+  onValueChange3(value) {
+    this.setState({
+      selected3: value
+    });
+  }
+  onValueChange4(value) {
+    this.setState({
+      selected4: value
+    });
+  }
+  onValueChange5(value) {
+    this.setState({
+      selected5: value
     });
   }
   render(){
@@ -33,18 +50,6 @@ export default class TambahTransaksi extends Component {
       <>
       <StyleProvider style={getTheme(material)}>
       <Container>
-      <Header>
-        <Left>
-          <Button transparent>
-            <Icon2 name='menu' size ={26} color="#fff"/>
-          </Button>
-        </Left>
-        <Body>
-          <Title>Tambah Transaksi</Title>
-        </Body>
-        <Right>
-        </Right>
-      </Header>
         <ScrollView>
         <View style={styles.title}>
           <Text style={styles.title}>DETAIL PEMBELIAN</Text>
@@ -133,8 +138,8 @@ export default class TambahTransaksi extends Component {
               placeholder="Metode"
               placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="#007aff"
-              selectedValue={this.state.selected2}
-              onValueChange={this.onValueChange2.bind(this)}
+              selectedValue={this.state.selected3}
+              onValueChange={this.onValueChange3.bind(this)}
             >
               <Picker.Item label="Cash" value="key0" />
               <Picker.Item label="BCA" value="key1" />
@@ -185,8 +190,8 @@ export default class TambahTransaksi extends Component {
               placeholder="Ekspedisi"
               placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="#007aff"
-              selectedValue={this.state.selected2}
-              onValueChange={this.onValueChange2.bind(this)}
+              selectedValue={this.state.selected4}
+              onValueChange={this.onValueChange4.bind(this)}
             >
               <Picker.Item label="Go Send" value="key0" />
               <Picker.Item label="JNE" value="key1" />
@@ -206,8 +211,8 @@ export default class TambahTransaksi extends Component {
               placeholder="Layanan"
               placeholderStyle={{ color: "#bfc6ea" }}
               placeholderIconColor="#007aff"
-              selectedValue={this.state.selected2}
-              onValueChange={this.onValueChange2.bind(this)}
+              selectedValue={this.state.selected5}
+              onValueChange={this.onValueChange5.bind(this)}
             >
               <Picker.Item label="Instan" value="key0" />
               <Picker.Item label="Same Day" value="key1" />

@@ -16,12 +16,7 @@ export default class App extends Component {
     headerTintColor : '#fff',
     headerTitleStyle : {
         fontSize : 18
-    },
-    headerRight : (
-        <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
-                     <Icon name='menu' size={30} style={{marginRight:10}} />
-                </TouchableOpacity>
-     )
+    }
 }
 }
 

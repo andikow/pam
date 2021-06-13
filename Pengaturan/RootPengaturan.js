@@ -9,7 +9,8 @@ import EkspedisiComponent from './Ekspedisi'
 import RootProfil from './Akun/Profilpengguna.js';
 import Daftaradmin from './Akun/Daftaradmin.js';
 import Tambahadmin from './Akun/Tambahadmin.js';
-import MenuBar from '../SideBar/MenuBar.js'
+import MenuBar from '../SideBar/MenuBar.js';
+import Login from '../screen/Login.js';
 
 
 const RootPengaturan = createStackNavigator({
@@ -33,6 +34,9 @@ const RootPengaturan = createStackNavigator({
     },
     MenuBar : {
         screen : MenuBar
+    },
+    Login:{
+        screen : Login
     }
 });
 

@@ -70,11 +70,7 @@ export default class CekOngkirDetail extends Component {
         headerTitleStyle : {
             fontSize : 18
         },
-        headerRight : (
-            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
-                         <Icon2 name='menu' size={30} style={{marginRight:10}} />
-                    </TouchableOpacity>
-         )
+        
     }
 }
 

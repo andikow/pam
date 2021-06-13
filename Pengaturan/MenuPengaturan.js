@@ -69,11 +69,6 @@ export default class MenuPengaturan extends Component {
         headerTitleStyle : {
             fontSize : 18
         },
-        headerRight : (
-            <TouchableOpacity  onPress={()=> navigation.push('MenuBar')}>
-                         <Icon name='menu' size={30} style={{marginRight:10}} />
-                    </TouchableOpacity>
-         )
     }
 }
     render(){
@@ -139,7 +134,7 @@ export default class MenuPengaturan extends Component {
                 </View>
                 <List>
                         <ListItem
-                            onPress={()=> this.props.navigation.navigate('')}>
+                            onPress={()=> this.props.navigation.navigate('Login')}>
                         <Text style={{color:'#FF0000'}}>Log Out</Text>
                         </ListItem>
                 </List>

@@ -77,6 +77,7 @@ import material from './native-base-theme/variables/material.js';
 import {name as appName} from './app.json';
 import MenuBar from './SideBar/MenuBar';
 import RootApp from './RootApp';
+import RootProduk from './Produk/RootProduk.js';
 export default class App extends Component {
   render() {
     return (

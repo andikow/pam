@@ -28,7 +28,7 @@ export default class Home extends Component {
     render() {
         return (
             <View>
-                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 35, paddingTop: 10}}>Abadi (Contoh Transaksi)</Text>
+                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 20, paddingTop: 10}}>Abadi (Contoh Transaksi)</Text>
                 <Text style={{color: '#a9a9a9', fontSize: 12, paddingLeft: 20, paddingTop: 5}}>1x Atasan Hijau dan Produk lainnya</Text>
                 <Text style={{color: '#000', fontSize: 12, paddingLeft: 20, paddingTop: 5, paddingBottom: 10}}>Dibuat 05 Apr, 18:02 </Text>
                 <Text style={styles.harga}>

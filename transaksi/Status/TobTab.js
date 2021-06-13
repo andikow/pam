@@ -49,43 +49,44 @@ const MainScreenNavigator = createStackNavigator({
     TopTab: {
         screen: TopTab,
         navigationOptions: {
-            title: 'Status Transaksi',
-            headerStyle: {
-                backgroundColor: '#6D73B5',
-            },
-            headerTitleStyle : {
-                color : '#fff',
-                paddingLeft : 40
-            },
-            headerRight : (
-                <Grid>
-                    <Col>
-                    <View style={{paddingRight: 8, paddingTop: 18}}>
-                            <Ionicons
-                                name= "md-search"
-                                size={20}
-                                color ="white"
-                                onPress={() =>{
-                                    console.log('Search')
-                                }}
-                            />
-                    </View>
-                    </Col>
-                    <Col>
-                    <View style={{paddingTop: 18}}>
-                    <Ionicons
-                            name= "md-filter"
-                            size={20}
-                            color ="white"
-                            paddingLeft
-                            onPress={() =>{
-                                console.log('Search')
-                            }}
-                        />
-                    </View>
-                    </Col>
-                </Grid>
-            )
+            headerShown:false
+            // title: 'Status Transaksi',
+            // headerStyle: {
+            //     backgroundColor: '#6D73B5',
+            // },
+            // headerTitleStyle : {
+            //     color : '#fff',
+            //     paddingLeft : 40
+            // },
+            // headerRight : (
+            //     <Grid>
+            //         <Col>
+            //         <View style={{paddingRight: 8, paddingTop: 18}}>
+            //                 <Ionicons
+            //                     name= "md-search"
+            //                     size={20}
+            //                     color ="white"
+            //                     onPress={() =>{
+            //                         console.log('Search')
+            //                     }}
+            //                 />
+            //         </View>
+            //         </Col>
+            //         <Col>
+            //         <View style={{paddingTop: 18}}>
+            //         <Ionicons
+            //                 name= "md-filter"
+            //                 size={20}
+            //                 color ="white"
+            //                 paddingLeft
+            //                 onPress={() =>{
+            //                     console.log('Search')
+            //                 }}
+            //             />
+            //         </View>
+            //         </Col>
+            //     </Grid>
+            // )
         },
     },
 });

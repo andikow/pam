@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import DatePicker from 'react-native-date-picker'
 
 const styles = StyleSheet.create({
     card_body: {
@@ -45,6 +46,10 @@ export default class Laporan extends Component {
             paddingLeft : 30
         }
     }
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()};
+    }
     render() {
         return (
             <View>
@@ -54,7 +59,13 @@ export default class Laporan extends Component {
                     </Text>
                 </View>
                 <View>
-                    <Text style={{paddingLeft: 50, marginTop:20, fontSize: 12}}>Dari Tanggal</Text>
+                    <Text style={{paddingLeft: 50, marginTop:20, fontSize: 14, fontWeight: 'bold'}}>Dari Tanggal</Text>
+                </View>
+                <View style={{flex: 1, alignItems: 'center'}}>
+                    <DatePicker
+                        date={this.state.date}
+                        onDateChange={(date) => this.setState({date})}
+                    />
                 </View>
                 <View style={styles.screen}>
                     <TouchableOpacity

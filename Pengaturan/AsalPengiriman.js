@@ -69,9 +69,9 @@ export default class AsalPengiriman extends Component {
                     <Text style={styles.text} >Asal Pengiriman</Text>
                     <TextInput style={styles.inputtext} />
 
-                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
+                    {/* <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
                         <Icon name="location" size={25} /> PILIH TITIK ASAL DI MAP
-                    </Text>
+                    </Text> */}
                     <Text></Text>
                     <Text style={styles.text} >Kode Pos</Text>
                     <TextInput style={styles.inputtext} />

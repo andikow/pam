@@ -68,14 +68,14 @@ export default class CekOngkir extends Component {
                     <TextInput  placeholder="1.0" style={styles.inputtext} />
 
                     <TextInput placeholder="Asal Pengiriman" style={styles.inputtext} />
-                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
+                    {/* <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')}>
                         <Icon name="location" size={25} /> PILIH TITIK ASAL DI MAP
-                    </Text>
+                    </Text> */}
 
                     <TextInput placeholder="Tujuan Pengiriman" style={styles.inputtext} />
-                    <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')} >
+                    {/* <Text style={styles.styleicon} onPress={() => Linking.openURL('https://www.google.co.id/maps')} >
                         <Icon name="location" size={25} /> PILIH TITIK TUJUAN DI MAP
-                    </Text>
+                    </Text> */}
                    
 
                     <Button onPress={()=> this.props.navigation.navigate('CekOngkirDetail')} rounded block style={styles.btncekOngkir}>

@@ -17,12 +17,23 @@ const styles = StyleSheet.create({
     text:{
         marginLeft:20,
         marginRight:20,
-        color:'#8a8a8a',
+        color:'#000',
         marginTop: 10,
     },
+    text1:{
+        marginRight:40,
+        marginLeft:40,
+        textAlign: 'center',
+        color:'#000',
+        marginTop: 20,
+    },
+    gambar:{
+        alignItems: 'center',
+        marginBottom: 20
+    },
+
   });
 
-    
 
 export default class ProfilToko extends Component {
     static navigationOptions = ({navigation})=>{
@@ -37,7 +48,7 @@ export default class ProfilToko extends Component {
             },
             headerRight:()=>(
                 <TouchableOpacity
-                  onPress={() => navigation.push('Nama')}
+                  onPress={() => navigation.push('EditProfilToko')}
                  style={{marginRight: 15}}>
                 <Ionicons name="md-pencil" size={30} color='#fff'/>
                 </TouchableOpacity>
@@ -49,23 +60,36 @@ export default class ProfilToko extends Component {
     render(){
         return (
             <ScrollView>
-            <View style={styles.container}>
+            <Text style={styles.text1}>
+                Foto, Nama dan No.Telp Toko di bawah ini
+                ini akan dicantumkan jua pada label
+                pengiriman.
+            </Text>
             
-                <View>
-                    <Text style={styles.text} >Nama Toko</Text>
-                    <TextInput style={styles.inputtext} placeholder="Estock Shop"  underlineColorAndroid='transparent'  
-                    editable={false}  />
-                    <Text></Text>
-                    <Text style={styles.text} >Nomor Telepon</Text>
-                    <TextInput style={styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'  
-                    editable={false}/>
-                    <Text></Text>
-                    
-                    <TextInput style={styles.inputtext} placeholder="URL Toko (Website/FB/IG/Tokopedia/etc"  underlineColorAndroid='transparent'  
-                    editable={false}/>               
-                </View>
+        <View style={styles.container}>
+
+            <View>
+            <View style={styles.gambar} >
+            <Ionicons name="image" size={100} color='#bcbfb9' style={styles.gambar}/>
+            <TouchableOpacity>
+                <Text>Ubah Foto</Text>
+            </TouchableOpacity>
+            
+            </View> 
+           
+                <Text style={styles.text} >Nama Toko</Text>
+                <TextInput style={styles.inputtext} placeholder="Enter Your Userame"  underlineColorAndroid='transparent'  
+                editable={false}  />
+                <Text></Text>
+                <Text style={styles.text} >Nomor Telepon</Text>
+                <TextInput style={styles.inputtext} placeholder="08XXXXXXXXXX"  underlineColorAndroid='transparent'  
+                editable={false}/>
+                <Text></Text>
+                <TextInput style={styles.inputtext} placeholder="URL toko (Website/IG/FB/Tokopedia/etc"  underlineColorAndroid='transparent'  
+                editable={false}/>             
             </View>
-            </ScrollView>
+        </View>
+        </ScrollView>
         );
     };
 };

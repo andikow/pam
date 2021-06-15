@@ -28,11 +28,12 @@ export default class Home extends Component {
     render() {
         return (
             <View>
-                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 20, paddingTop: 10}}>Abadi (Contoh Transaksi)</Text>
-                <Text style={{color: '#a9a9a9', fontSize: 12, paddingLeft: 20, paddingTop: 5}}>1x Atasan Hijau dan Produk lainnya</Text>
-                <Text style={{color: '#000', fontSize: 12, paddingLeft: 20, paddingTop: 5, paddingBottom: 10}}>Dibuat 05 Apr, 18:02 </Text>
+                <TouchableOpacity onPress={()=> this.props.navigation.navigate('DetailTransaksi')}>
+                <Text style={{fontWeight: 'bold', fontSize: 17, paddingLeft: 20, paddingTop: 10}}>Vandarina (Contoh Transaksi)</Text>
+                <Text style={{color: '#a9a9a9', fontSize: 12, paddingLeft: 20, paddingTop: 5}}>1x Kaos Oblong Putih dan Produk lainnya</Text>
+                <Text style={{color: '#000', fontSize: 12, paddingLeft: 20, paddingTop: 5, paddingBottom: 10}}>Dibuat 17 Mei, 18:02 </Text>
                 <Text style={styles.harga}>
-                    Rp 350.000
+                    Rp 110.000
                 </Text>
                 <View
                     style={{
@@ -40,6 +41,8 @@ export default class Home extends Component {
                         borderBottomWidth: 1,
                         paddingTop: 10
                     }} />
+
+            </TouchableOpacity>
             </View>
         );
     }

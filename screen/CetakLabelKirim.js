@@ -16,7 +16,9 @@ import {Col, Row, Grid} from 'react-native-easy-grid';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Icon2 from 'react-native-vector-icons/Ionicons'
 import Icon3 from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import { Container, StyleProvider } from 'native-base';
+import getTheme from './../native-base-theme/components';
+import material from './../native-base-theme/variables/material.js';
 
 
 const CetakLabelKirim = () => {
@@ -48,19 +50,12 @@ const CetakLabelKirim = () => {
     [{text:"OK", onPress: () => console.log("alert closed")}])}
 
 
-    navigationOptions = ({navigation})=>{
-        return {
-            title : 'Cetak Label Pengiriman',
-            headerStyle : {
-                backgroundColor : "#6D73B5"
-            },
-            headerTintColor : '#fff',
-            }
-        }
-
     return(
+        
+        <StyleProvider style={getTheme(material)}>
+        <Container>
         <ScrollView style={{padding:10, backgroundColor:'#fff'}}>
-            <View style={{marginTop:50}}>
+            <View style={{marginTop:10}}>
             <View style={styles.title}>
                 <Text style={styles.title}>DETAIL PENERIMA</Text>
             </View>
@@ -234,6 +229,8 @@ const CetakLabelKirim = () => {
 
 
         </ScrollView>
+        </Container>
+        </StyleProvider>
     )
 }
 

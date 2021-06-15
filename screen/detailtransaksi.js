@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Button, StyleProvider, Left, Right, Body, Title } from 'native-base';
+import { Container, Button, StyleProvider } from 'native-base';
+import { TouchableOpacity} from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import getTheme from './../native-base-theme/components';
 import material from './../native-base-theme/variables/material.js';
@@ -17,23 +18,23 @@ import {
 
 
 export default class DetailTransaksi extends Component {
+  static navigationOptions = ({navigation})=>{
+    return {
+    title : 'Detail Transaksi',
+    headerStyle : {
+        backgroundColor : '#6D73B5'
+    },
+    headerTintColor : '#fff',
+    headerTitleStyle : {
+        fontSize : 18
+    }
+    }
+  }
   render(){
     return (
       <>
       <StyleProvider style={getTheme(material)}>
       <Container>
-      <Header>
-        <Left>
-          <Button transparent>
-            <Icon2 name='menu' size ={26} color="#fff"/>
-          </Button>
-        </Left>
-        <Body>
-          <Title>Detail Transaksi</Title>
-        </Body>
-        <Right>
-        </Right>
-      </Header>
         <ScrollView>
         <View style={styles.title}>
           <Text style={styles.title}>DETAIL PEMBELIAN</Text>
@@ -90,7 +91,7 @@ export default class DetailTransaksi extends Component {
               <Text style={styles.judul}>Total Harga Barang*</Text>
             </Row>
             <Row style={styles.data}>
-              <Text>Rp 350.000</Text>
+              <Text>Rp 110.000</Text>
             </Row>
           </Col>
         </Grid>
@@ -171,10 +172,10 @@ export default class DetailTransaksi extends Component {
             <Text>1x</Text>
           </Col>
           <Col>
-            <Text>Atasan Hijau</Text>
+            <Text>Kaos Oblong Putih</Text>
           </Col>
           <Col>
-            <Text>Rp 250.000</Text>
+            <Text>Rp 40.000</Text>
           </Col>
           </Row>
 
@@ -185,10 +186,10 @@ export default class DetailTransaksi extends Component {
               <Text>1x</Text>
             </Col>
             <Col>
-              <Text>Bawahan Merah</Text>
+              <Text>Celana Jeans</Text>
             </Col>
             <Col>
-              <Text>Rp 100.000</Text>
+              <Text>Rp 90.000</Text>
             </Col>
             </Row>
         </Grid>
@@ -205,12 +206,7 @@ export default class DetailTransaksi extends Component {
         </View>
         <Grid>
         <Row style={styles.riwayat}>
-          <Col>
-            <Text>17 Mar, 21:13</Text>
-          </Col>
-          <Col style={{flexDirection:'row'}}>
-            <Text style={styles.wrap}>Transaction status changed to paid</Text>
-          </Col>
+          
           </Row>
           <Row style={styles.riwayat}>
             <Col>
@@ -234,19 +230,19 @@ export default class DetailTransaksi extends Component {
 
         <Grid>
           <Col>
-            <Button rounded block light style={styles.btnblock1}>
+            <TouchableOpacity style={styles.btnblock1} onPress={()=> this.props.navigation.navigate('CetakLabelKirim')}>
               <Text style={styles.buttonText}>CETAK LABEL PENGIRIMAN</Text>
-            </Button>
+            </TouchableOpacity>
           </Col>
           <Col>
-          <Button rounded block light style={styles.btnblock1}>
+          <TouchableOpacity rounded block light style={styles.btnblock1}>
             <Text style={styles.buttonText}>SUDAH DIKIRIM</Text>
-          </Button>
+            </TouchableOpacity>
           </Col>
         </Grid>
 
-        <Button rounded block style={styles.btnblock}>
-          <Text style={styles.btnpesantext}>PESAN PENGIRIMAN</Text>
+        <Button onPress={()=> this.props.navigation.navigate('MainScreenNavigator')} rounded block style={styles.btnpesantext}>
+                        <Text style={{color:'#FFFFFF'}}>SIMPAN</Text>
         </Button>
 
         </ScrollView>
@@ -313,8 +309,8 @@ const styles = StyleSheet.create({
      padding: 10,
      margin: 5,
      borderColor: '#A0A0A0',
-     borderWidth: 1,
      color: '#fff',
+
    },
    buttonText: {
      textAlign: 'center',
@@ -331,5 +327,6 @@ const styles = StyleSheet.create({
      color: '#fff',
      fontSize: 12,
      fontWeight: 'bold',
+     margin:10
    },
 });

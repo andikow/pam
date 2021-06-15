@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
 export default class MenuBar extends Component {
     static navigationOptions = ({navigation})=>{
         return {
-        header:null
     }
 }
   render() {
@@ -33,8 +32,6 @@ export default class MenuBar extends Component {
             <Title>
               <Icon name="store" size={40} />
             </Title>
-
-
             <Text />
 
             <View style={{alignItems:'center'}}>

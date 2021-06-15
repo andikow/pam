@@ -89,7 +89,7 @@ export default class MenuPengaturan extends Component {
                         </ListItem>
 
                         <ListItem
-                            onPress={()=> this.props.navigation.navigate('')}>
+                            onPress={()=> this.props.navigation.navigate('ProfilToko')}>
                         <Text>Profil Toko</Text>
                         </ListItem>
 

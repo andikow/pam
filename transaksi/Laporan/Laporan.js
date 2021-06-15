@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
 import DatePicker from 'react-native-date-picker'
 
 const styles = StyleSheet.create({
@@ -51,6 +51,11 @@ export default class Laporan extends Component {
         this.state = {date: new Date()};
     }
     render() {
+
+        const alertCetakLaporan = () =>{
+            Alert.alert(
+            "Laporan Transaksi telah dibuat dan dikirimkan ke email Anda",
+            [{text:"OK", onPress: () => console.log("alert closed")}])}
         return (
             <View>
                 <View style={styles.card_body}>
@@ -59,7 +64,7 @@ export default class Laporan extends Component {
                     </Text>
                 </View>
                 <View>
-                    <Text style={{paddingLeft: 50, marginTop:20, fontSize: 14, fontWeight: 'bold'}}>Dari Tanggal</Text>
+                    <Text style={{paddingLeft: 50, marginTop:20, marginBottom:20, fontSize: 14, fontWeight: 'bold'}}>Dari Tanggal</Text>
                 </View>
                 <View style={{flex: 1, alignItems: 'center'}}>
                     <DatePicker
@@ -68,11 +73,12 @@ export default class Laporan extends Component {
                     />
                 </View>
                 <View style={styles.screen}>
-                    <TouchableOpacity
-                        onPress={()=> navigation.push('Search')}
+                <TouchableOpacity
                         style={styles.button}>
                         <Text style={{color: 'white'}}>KIRIM LAPORAN KE EMAIL</Text>
                     </TouchableOpacity>
+
+   
                 </View>
             </View>
 

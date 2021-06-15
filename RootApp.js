@@ -29,9 +29,19 @@ import DaftarProduk from "./Produk/DaftarProduk";
 import TambahProduk from "./Produk/TambahProduk";
 import TambahTransaksi from "./screen/TambahTransaksi";
 
+import DetailTransaksi from "./screen/detailtransaksi";
+import CetakLabelKirim from "./screen/CetakLabelKirim";
+import ProfilToko from "./Pengaturan/Akun/ProfilToko";
+import EditProfilToko from "./Pengaturan/Akun/EditProfilToko";
+
+
+
 const RootApp = createStackNavigator({
     MenuBar : {
-        screen : MenuBar
+        screen : MenuBar,
+        navigationOptions : {
+            headerShown:false
+        },
     },
     MenuPengaturan:{
         screen : MenuPengaturanComponent
@@ -140,7 +150,30 @@ const RootApp = createStackNavigator({
         }
     }
 
-    }
+    },
+
+    DetailTransaksi:{
+        screen : DetailTransaksi
+    },
+    CetakLabelKirim:{
+        screen : CetakLabelKirim,
+        navigationOptions : {
+        title : 'Cetak Label Pengiriman',
+            headerStyle : {
+                backgroundColor : '#6D73B5'
+            },
+            headerTintColor : '#fff',
+            headerTitleStyle : {
+                fontSize : 18
+            }
+            }
+        
+    },
+    ProfilToko:{
+        screen : ProfilToko
+    },
+
+
 });
 
 export default createAppContainer(RootApp);

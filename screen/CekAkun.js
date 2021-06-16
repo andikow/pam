@@ -31,45 +31,44 @@ export default class CekAkun extends Component {
         this.state ={email :''};
       }
 
+      handleEmail = (text) =>
+      {
+          this.setState({email:text})
+      }
+
+
     render(){
       return (
         <View>
             <ScrollView>
-            <View style={{alignItems:'center',justifyContent:'center',marginTop:100}}>
+            <View style={{alignItems:'center',justifyContent:'center',marginTop:10}}>
                 <Image
-                     style={{width:200,height:200}}
-                     source={require('../assets/images/logo.png')}
+                     style={{width:400,height:400}}
+                     source={require('../assets/images/toko.png')}
                 />  
             </View>
-            <Text></Text>
 
-            {/* <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
+            <View style={{justifyContent:'center', alignItems:'center', paddingTop:10, paddingHorizontal:20}}>
                 <Text style={{fontSize:16}}>
                     Masukkan e-mail kamu untuk login atau daftar akun
                 </Text>
-            </View> */}
+            </View>
 
-            {/* <View style={{paddingTop:20}}> */}
-            {/* <Text style={styles.label}>E-mail</Text>
+            <View style={{paddingTop:10}}>
+            <Text style={styles.label}>E-mail</Text>
             <TextInput
               style={styles.input}
               placeholder="Masukkan E-mail Anda"
-              onChangeText={(value)=> this.setState({email:value})}
+              onChangeText={this.handleEmail}
               autoCapitalize="none"
               keyboardType="email-address"
               returnKeyType="next"
             />
-            </View> */}
+            </View>
             
             <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:30}}>  
             <Button
-             title="Login" 
-              color='#6d73b5'
-              onPress={()=> this.props.navigation.navigate('Login')}
-            /> 
-            <Text></Text>
-            <Button
-             title="Daftar" 
+             title="Daftar atau Login" 
               color='#6d73b5'
               onPress={()=> this.props.navigation.navigate('DaftarAkun')}
             /> 

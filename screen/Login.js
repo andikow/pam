@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import { SafeAreaView,
     StyleSheet,
     ScrollView,
@@ -9,7 +9,7 @@ import { SafeAreaView,
     Button,
     Image,
     Alert
-    } from 'react-native';
+    } from 'react-native'; 
 
     const styles =StyleSheet.create({
         label : {height: 20, fontSize: 15, marginHorizontal: 15, marginTop:10},
@@ -18,12 +18,12 @@ import { SafeAreaView,
     })
 
 export default class Login extends Component {
-    static navigationOptions = {
-        title : 'Login',
-        headerStyle : {
-            backgroundColor : '#6d73b5'
-        },
-        headerTintColor : '#fff', headerTitleStyle : { fontSize : 20 }
+    static navigationOptions = { 
+        title : 'Login dengan E-mail', 
+        headerStyle : { 
+            backgroundColor : '#6d73b5' 
+        }, 
+        headerTintColor : '#fff', headerTitleStyle : { fontSize : 20 } 
     }
 
     constructor(props) {
@@ -42,7 +42,7 @@ export default class Login extends Component {
                 <Image
                      style={{width:200,height:200}}
                      source={require('../assets/images/logo.png')}
-                />
+                />  
             </View>
 
             <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
@@ -59,7 +59,7 @@ export default class Login extends Component {
               autoCapitalize="none"
               keyboardType="email-address"
               returnKeyType="next"
-              placeholder="Masukkan Email anda"
+              placeholder="E-mail"
             />
             </View>
 
@@ -74,20 +74,20 @@ export default class Login extends Component {
             />
             </View>
 
-            <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:10}}>
+            <View style={{paddingTop:30,paddingHorizontal:50, paddingBottom:10}}>  
             <Button
-             title="Login"
+             title="Login" 
               color='#6d73b5'
-              onPress={()=> this.props.navigation.navigate('RootApp')}
-            />
+              onPress={()=> this.props.navigation.navigate('TobTab')}
+            /> 
             </View>
 
-            <View style={{paddingTop:10,paddingHorizontal:50, paddingBottom:30}}>
+            <View style={{paddingTop:10,paddingHorizontal:50, paddingBottom:30}}>  
             <Button
-             title="Buat Password Baru"
+             title="Buat Password Baru" 
               color='#6d73b5'
-              onPress={()=> this.props.navigation.navigate('PasswordBaru')}
-            />
+              onPress={()=> this.props.navigation.push('PasswordBaru')}
+            /> 
             </View>
             </ScrollView>
         </View>

@@ -25,10 +25,10 @@ export default class BerhasilBuatAkun extends Component {
       return (
         <View>
             <ScrollView>
-            <View style={{alignItems:'center',justifyContent:'center',marginTop:50}}>
+            <View style={{alignItems:'center',justifyContent:'center',marginTop:20}}>
                 <Image
                      style={{width:300,height:300}}
-                     source={require('../assets/images/logo.png')}
+                     source={require('../assets/images/email.png')}
                 />  
             </View>
 

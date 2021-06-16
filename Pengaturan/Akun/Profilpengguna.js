@@ -33,9 +33,9 @@ export default class Profilpengguna extends Component {
             },
             headerTintColor : '#fff',
             headerTitleStyle : {
-                fontSize : 18
+                fontSize : 20
             },
-            headerRight:()=>(
+            headerRight:(
                 <TouchableOpacity
                   onPress={() => navigation.push('Nama')}
                  style={{marginRight: 15}}>

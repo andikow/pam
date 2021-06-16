@@ -1,15 +1,16 @@
-import React from "react"; 
-import { createAppContainer } from "react-navigation"; 
+import React from "react";
+import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import MulaiComponent from './Mulai'
 import CekAkunComponent from './CekAkun'
-import DaftarAkunComponent from './DaftarAkun'
+import DaftarAkunComponent from './DaftarAkun.js'
 import BerhasilBuatAkunComponent from './BerhasilBuatAkun'
 import LoginComponent from './Login'
 import PasswordBaruComponent from './PasswordBaru'
-import TobTabComponent from '../transaksi/Status/TobTab'
+import RootApp from './../RootApp.js'
+import TambahProduk from "../Produk/TambahProduk";
 
-const AppNavigator = createStackNavigator({ 
+const AppNavigator = createStackNavigator({
     Mulai : {
         screen : MulaiComponent
         },
@@ -28,8 +29,9 @@ const AppNavigator = createStackNavigator({
     PasswordBaru : {
         screen : PasswordBaruComponent
         },
-    TobTab : {
-        screen : TobTabComponent
+    RootApp : {
+        screen : RootApp,
+        navigationOptions: { headerShown: false }
         },
     })
 

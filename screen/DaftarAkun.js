@@ -42,14 +42,14 @@ export default class DaftarAkun extends Component {
     render(){
       return (
             <ScrollView>
-            <View style={{alignItems:'center',justifyContent:'center'}}>
+            <View style={{alignItems:'center',justifyContent:'center',marginTop:50, marginBottom:10}}>
                 <Image
-                     style={{width:300,height:300}}
-                     source={require('../assets/images/toko.png')}
+                     style={{width:200,height:200}}
+                     source={require('../assets/images/logo.png')}
                 />  
             </View>
 
-            <View style={{justifyContent:'center', alignItems:'center', paddingHorizontal:20}}>
+            <View style={{justifyContent:'center', alignItems:'center', paddingTop:30, paddingHorizontal:20}}>
                 <Text style={{fontSize:16}}>
                     Email kamu belum terdaftar. Silakan lengkapi form untuk membuat akun ESTOCK
                 </Text>
@@ -103,6 +103,18 @@ export default class DaftarAkun extends Component {
                 </Col>
                 </Row>
             </Grid>
+            </View>
+            
+            <View>
+            <Text style={styles.label}>E-mail</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Masukkan Email anda"
+              onChangeText={(value)=> this.setState({email:value})}
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+            />
             </View>
 
             <View>
